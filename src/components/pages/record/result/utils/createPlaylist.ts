@@ -13,6 +13,13 @@ let remainTags: string[] = []; // 콘서트, 그룹, 타이틀 제외한 태그�
 let songs: SongType[] = []; // 태그 합집합 노래들
 let allTaggedSongs: SongType[] = []; // 태그 교집합 노래들
 
+function resetItems() {
+  tags = []; // 사용자가 선택한 모든 태그들
+  remainTags = []; // 콘서트, 그룹, 타이틀 제외한 태그들
+  songs = []; // 태그 합집합 노래들
+  allTaggedSongs = []; // 태그 교집합 노래들
+}
+
 // 1. json 에서 데이터 가져오는 함수들
 async function fetchNCT127() {
   return fetch('/assets/data/songs/nct127.json').then((response) =>
@@ -213,66 +220,9 @@ function sortByRelease() {
 }
 
 export async function startTagSearch(tags: string[]) {
+  resetItems();
   loadTags(tags);
   await handleTags();
   sortByRelease();
   return songs;
 }
-
-// // --------------------------------------
-// // 멜론 연결
-// const melon = document.querySelector('.musicLink__melon');
-// melon.addEventListener('click', () => {
-//   const uids = connectUid(
-//     'melon',
-//     allTaggedSongs,
-//     songs,
-//     title_allTaggedSongs,
-//     title_songs,
-//   );
-//   melonClickListener(songsCnt, uids);
-// });
-
-// // 지니 연결
-// const genie = document.querySelector('.musicLink__genie');
-// genie.addEventListener('click', () => {
-//   const uids = connectUid(
-//     'genie',
-//     allTaggedSongs,
-//     songs,
-//     title_allTaggedSongs,
-//     title_songs,
-//   );
-//   genieClickListener(songsCnt, uids);
-// });
-
-// // 벅스 연결
-// const bugs = document.querySelector('.musicLink__bugs');
-// bugs.addEventListener('click', (e) => {
-//   if (e.target.nodeName !== 'A') return;
-//   const uids = connectUid(
-//     'bugs',
-//     allTaggedSongs,
-//     songs,
-//     title_allTaggedSongs,
-//     title_songs,
-//   );
-//   bugsClickListener(songsCnt, uids);
-// });
-
-// 플로 연결 - 이미지 다운
-// const flo = document.querySelector('.musicLink__flo');
-// flo.addEventListener('click', () => {
-//   if (songsCnt == 0) {
-//     alert(`선택된 노래가 없습니다!`);
-//   }
-//   if (deviceInfo == 'WINDOWS' || deviceInfo == 'MAC') {
-//     alert('웹 버전은 지원하지 않습니다..');
-//     // location.href = '/record-flo-image';
-//   } else {
-//     alert('이미지를 다운해주세요!');
-//     location.href = '/record-flo-image';
-//   }
-// });
-
-// 스크롤하세요 팝업 최초 스크롤 전에만 띄우기
