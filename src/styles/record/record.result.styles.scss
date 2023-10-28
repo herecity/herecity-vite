@@ -1,6 +1,14 @@
 .record-result-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   background-color: var(--color-white);
+
   .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
     .header {
       word-break: keep-all;
       white-space: pre-wrap;
@@ -25,6 +33,7 @@
     }
 
     .playlist-section {
+      flex: 1;
       display: flex;
       justify-content: center;
       background-color: var(--color-green);

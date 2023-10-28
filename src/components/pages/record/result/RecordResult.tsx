@@ -9,22 +9,25 @@ import {
   genieClickListener,
   melonClickListener,
 } from './utils/createDepplink';
+import Loading from '@components/common/Loading';
 
 const RecordResult = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [tags, setTags] = useState<Set<string>>(new Set());
   const [songs, setSongs] = useState<SongType[]>([]);
 
   const loadSongs = async (tags: string[]) => {
     const songs = await startTagSearch(tags);
     setSongs(songs);
+    setIsLoading(false);
   };
 
   const loadTags = () => {
     const urlSearchParams = new URLSearchParams(window.location.search);
     const tagParams = Object.fromEntries(urlSearchParams.entries());
     const tmpTagArr = tagParams.tags.split(',');
-    loadSongs(tmpTagArr);
     setTags(new Set(tmpTagArr));
+    loadSongs(tmpTagArr);
   };
 
   useEffect(() => {
@@ -51,33 +54,38 @@ const RecordResult = () => {
             <img src={images.genie} alt='' />
           </button>
         </div>
-        <section className='playlist-section'>
-          <ul>
-            {songs.map((song) => {
-              return (
-                <li className='song-container'>
-                  <div className='item thumbnail'>
-                    <img className='thumbnail ' src={song.image} alt='' />
-                  </div>
-                  <div className='item title'>{song.title}</div>
-                  <div className='item artist'>{song.artist}</div>
-                  <div className='item tags'>
-                    {song.tags
-                      .filter((tag) => tags.has(tag))
-                      .map((_) => (
-                        <div className='bar' />
-                      ))}
-                    {Array(3 - song.tags.filter((tag) => tags.has(tag)).length)
-                      .fill(0)
-                      .map((_) => (
-                        <div className='bar not' />
-                      ))}
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
+        {isLoading && <Loading />}
+        {songs.length > 0 && (
+          <section className='playlist-section'>
+            <ul>
+              {songs.map((song) => {
+                return (
+                  <li className='song-container'>
+                    <div className='item thumbnail'>
+                      <img className='thumbnail ' src={song.image} alt='' />
+                    </div>
+                    <div className='item title'>{song.title}</div>
+                    <div className='item artist'>{song.artist}</div>
+                    <div className='item tags'>
+                      {song.tags
+                        .filter((tag) => tags.has(tag))
+                        .map((_) => (
+                          <div className='bar' />
+                        ))}
+                      {Array(
+                        3 - song.tags.filter((tag) => tags.has(tag)).length,
+                      )
+                        .fill(0)
+                        .map((_) => (
+                          <div className='bar not' />
+                        ))}
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        )}
       </main>
     </div>
   );

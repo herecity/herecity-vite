@@ -1,5 +1,13 @@
 .record-result-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   background-color: var(--color-white);
+}
+.record-result-root .main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .record-result-root .main .header {
   word-break: keep-all;
@@ -22,6 +30,7 @@
   height: 40px;
 }
 .record-result-root .main .playlist-section {
+  flex: 1;
   display: flex;
   justify-content: center;
   background-color: var(--color-green);
