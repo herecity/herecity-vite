@@ -1,0 +1,76 @@
+.record-result-root {
+  background-color: var(--color-green);
+}
+.record-result-root .main {
+  padding: 0 20px;
+}
+.record-result-root .main .header {
+  word-break: keep-all;
+  white-space: pre-wrap;
+  text-align: center;
+  padding: 100px 0;
+  font-size: 30px;
+}
+.record-result-root .main .playlist-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.record-result-root .main .playlist-section ul .song-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--color-green-lighten);
+  padding: 8px;
+  border-radius: var(--border-radius);
+}
+.record-result-root .main .playlist-section ul .song-container .thumbnail {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--border-radius);
+}
+.record-result-root .main .playlist-section ul .song-container .title {
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.record-result-root .main .playlist-section ul .song-container .artist {
+  width: 120px;
+}
+.record-result-root .main .playlist-section ul .song-container .tags {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .record-result-root .main .header {
+    font-size: 24px;
+  }
+  .record-result-root .main .playlist-section ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .record-result-root .main .playlist-section ul .song-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .record-result-root .main .playlist-section ul .song-container .thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--border-radius);
+  }
+  .record-result-root .main .playlist-section ul .song-container .title {
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+  }
+  .record-result-root .main .playlist-section ul .song-container .artist {
+    width: 120px;
+    font-size: 14px;
+  }
+  .record-result-root .main .playlist-section ul .song-container .tags {
+    flex: 1;
+  }
+}/*# sourceMappingURL=record.result.styles.css.map */

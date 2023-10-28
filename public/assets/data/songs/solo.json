@@ -1,0 +1,771 @@
+{
+  "doyoung": [
+    {
+      "title": "COOL",
+      "artist": "도영 (DOYOUNG), 키 (KEY)",
+      "album": "COOL - 38사기동대 OST Part.2",
+      "uid": { "melon": "8262106", "genie": "86427549", "bugs": "30315486" },
+      "image": "https://image.bugsm.co.kr/album/images/50/200445/20044578.jpg?version=20210901002229.0",
+      "tags": [
+        "운동할때",
+        "월요병퇴치",
+        "밤샘노동요",
+        "자신감뿜뿜",
+        "전투력상승",
+        "OST"
+      ]
+    },
+    {
+      "title": "COOL (Inst.)",
+      "artist": "도영 (DOYOUNG), 키 (KEY)",
+      "album": "COOL - 38사기동대 OST Part.2",
+      "uid": { "melon": "8262107", "genie": "86427550", "bugs": "30315487" },
+      "image": "https://image.bugsm.co.kr/album/images/50/200445/20044578.jpg?version=20210901002229.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "First Christmas",
+      "artist": "도영 (DOYOUNG), 조이 (JOY)",
+      "album": "인기가요 뮤직크러쉬 Part.4",
+      "uid": { "melon": "30157785", "genie": "86818333", "bugs": "30489582" },
+      "image": "https://image.bugsm.co.kr/album/images/50/200726/20072639.jpg?version=20210902141447.0",
+      "tags": [
+        "겨울노래",
+        "눈이펑펑",
+        "산책할때",
+        "드라이브",
+        "설렘가득LOVE",
+        "기분전환",
+        "해피바이러스",
+        "상큼청량",
+        "달콤달콤",
+        "SPECIAL"
+      ]
+    },
+    {
+      "title": "Hard for me",
+      "artist": "도영 (DOYOUNG)",
+      "album": "리치맨 OST Part.5",
+      "uid": { "melon": "31121498", "genie": "88024590", "bugs": "31101063" },
+      "image": "https://image.bugsm.co.kr/album/images/50/201719/20171950.jpg?version=20210421044753.0",
+      "tags": [
+        "겨울노래",
+        "잠들기전",
+        "새벽감성",
+        "비가주룩",
+        "이별후유증",
+        "나만알기아까운",
+        "울고싶은날",
+        "편안잔잔",
+        "OST"
+      ]
+    },
+    {
+      "title": "Hard for me (Inst.)",
+      "artist": "도영 (DOYOUNG)",
+      "album": "리치맨 OST Part.5",
+      "uid": { "melon": "31121499", "genie": "88024591", "bugs": "31101064" },
+      "image": "https://image.bugsm.co.kr/album/images/50/201719/20171950.jpg?version=20210421044753.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "Like a Star",
+      "artist": "도영 (DOYOUNG)",
+      "album": "유미의 세포들 OST",
+      "uid": { "melon": "34188759", "genie": "94760537", "bugs": "32369101" },
+      "image": "https://image.bugsm.co.kr/album/images/50/204293/20429330.jpg?version=20211103005433.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "Like a Star",
+      "artist": "도영 (DOYOUNG)",
+      "album": "유미의 세포들 OST Part 4",
+      "uid": { "melon": "34033714", "genie": "93689965", "bugs": "32348275" },
+      "image": "https://image.bugsm.co.kr/album/images/50/204240/20424039.jpg?version=20211030003738.0",
+      "tags": [
+        "여름노래",
+        "잠들기전",
+        "새벽감성",
+        "비가주룩",
+        "산책할때",
+        "집으로가는길",
+        "설렘가득LOVE",
+        "나만알기아까운",
+        "울고싶은날",
+        "힐링이필요해",
+        "달콤달콤",
+        "편안잔잔",
+        "OST"
+      ]
+    },
+    {
+      "title": "Like a Star (Inst.)",
+      "artist": "도영 (DOYOUNG)",
+      "album": "유미의 세포들 OST Part 4",
+      "uid": { "melon": "34033715", "genie": "93689966", "bugs": "32348276" },
+      "image": "https://image.bugsm.co.kr/album/images/50/204240/20424039.jpg?version=20211030003738.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "밤공기",
+      "artist": "도영 (DOYOUNG)",
+      "album": "심야카페 OST Part.2",
+      "uid": { "melon": "33299915", "genie": "92336914", "bugs": "32153101" },
+      "image": "https://image.bugsm.co.kr/album/images/50/203790/20379088.jpg?version=20210902142409.0",
+      "tags": [
+        "여름노래",
+        "가을노래",
+        "잠들기전",
+        "새벽감성",
+        "비가주룩",
+        "집으로가는길",
+        "나만알기아까운",
+        "울고싶은날",
+        "힐링이필요해",
+        "편안잔잔",
+        "OST"
+      ],
+      "URL_mv": "https://www.youtube.com/watch?v=82RfCOVdf6A"
+    },
+    {
+      "title": "밤공기 (Inst.)",
+      "artist": "도영 (DOYOUNG)",
+      "album": "심야카페 OST Part.2",
+      "uid": { "melon": "33299916", "genie": "92336915", "bugs": "32153102" },
+      "image": "https://image.bugsm.co.kr/album/images/50/203790/20379088.jpg?version=20210902142409.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "별빛이 피면 (Star Blossom)",
+      "artist": "도영 (DOYOUNG), 김세정",
+      "album": "별빛이 피면 (Star Blossom) - SM STATION",
+      "uid": { "melon": "30669683", "genie": "87476006", "bugs": "30807768" },
+      "image": "https://image.bugsm.co.kr/album/images/50/201234/20123492.jpg?version=20210330002730.0",
+      "tags": [
+        "봄노래",
+        "잠들기전",
+        "산책할때",
+        "집으로가는길",
+        "설렘가득LOVE",
+        "나만알기아까운",
+        "달콤달콤",
+        "몽환적인",
+        "편안잔잔",
+        "이지리스닝",
+        "SM STATION"
+      ],
+      "URL_mv": "https://www.youtube.com/watch?v=lpv-mkmddms"
+    },
+    {
+      "title": "별빛이 피면 (Star Blossom) (Inst.)",
+      "artist": "도영 (DOYOUNG), 김세정",
+      "album": "별빛이 피면 (Star Blossom) - SM STATION",
+      "uid": { "melon": "30669684", "genie": "87476007", "bugs": "30807769" },
+      "image": "https://image.bugsm.co.kr/album/images/50/201234/20123492.jpg?version=20210330002730.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "우리 하나되어 2021",
+      "artist": "도영 (DOYOUNG), 슬기 (SEULGI), 백지영, 서은광 (비투비), 이창섭, 현재 (THE BOYZ), 민영 (Brave Girls), MJ (ASTRO), 김재환, 하성운, 10CM, 인순이, 옥주현, 박봄 (Park Bom), 김태우, 황치열, Y, 타이거JK, 비지 (Bizzy), 위아이 (WEi), 베이비소울 (러블리즈), 지수연 (Weki Meki), 수윤, 제인, 주이, 아인, 차준호, PITTA (강형호), 김조한, 레떼아모르, 시연 (드림캐쳐), 유현, 신촌타이거, 아이즈(IZ), 왁스, 이상민, 치타 (CHEETAH), 테오, 트라이비(TRI.BE)",
+      "album": "2021 지금 다시 하나되어",
+      "uid": { "melon": "33485659", "genie": "93310655", "bugs": "32234769" },
+      "image": "https://image.bugsm.co.kr/album/images/50/203970/20397078.jpg?version=20210518002913.0",
+      "tags": ["굿모닝", "공부할때", "집으로가는길", "힐링이필요해", "SPECIAL"],
+      "URL_mv": "https://www.youtube.com/watch?v=RWjfyX-uAdc"
+    },
+    {
+      "title": "우리 하나되어 2021 (3D SOUND)",
+      "artist": "도영 (DOYOUNG), 슬기 (SEULGI), 백지영, 서은광 (비투비), 이창섭, 현재 (THE BOYZ), 민영 (Brave Girls), MJ (ASTRO), 김재환, 하성운, 10CM, 인순이, 옥주현, 박봄 (Park Bom), 김태우, 황치열, Y, 타이거JK, 비지 (Bizzy), 위아이 (WEi), 베이비소울 (러블리즈), 지수연 (Weki Meki), 수윤, 제인, 주이, 아인, 차준호, PITTA (강형호), 김조한, 레떼아모르, 시연 (드림캐쳐), 유현, 신촌타이거, 아이즈(IZ), 왁스, 이상민, 치타 (CHEETAH), 테오, 트라이비(TRI.BE)",
+      "album": "2021 지금 다시 하나되어",
+      "uid": { "melon": "33485660", "genie": "93310656", "bugs": "32234770" },
+      "image": "https://image.bugsm.co.kr/album/images/50/203970/20397078.jpg?version=20210518002913.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "우리 하나되어 2021 (Inst.)",
+      "artist": "도영 (DOYOUNG), 슬기 (SEULGI), 백지영, 서은광 (비투비), 이창섭, 현재 (THE BOYZ), 민영 (Brave Girls), MJ (ASTRO), 김재환, 하성운, 10CM, 인순이, 옥주현, 박봄 (Park Bom), 김태우, 황치열, Y, 타이거JK, 비지 (Bizzy), 위아이 (WEi), 베이비소울 (러블리즈), 지수연 (Weki Meki), 수윤, 제인, 주이, 아인, 차준호, PITTA (강형호), 김조한, 레떼아모르, 시연 (드림캐쳐), 유현, 신촌타이거, 아이즈(IZ), 왁스, 이상민, 치타 (CHEETAH), 테오, 트라이비(TRI.BE)",
+      "album": "2021 지금 다시 하나되어",
+      "uid": { "melon": "33485661", "genie": "93310657", "bugs": "32234771" },
+      "image": "https://image.bugsm.co.kr/album/images/50/203970/20397078.jpg?version=20210518002913.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "인형",
+      "artist": "도영 (DOYOUNG), 백현 (BAEKHYUN)",
+      "album": "Rewind : Blossom",
+      "uid": { "melon": "33347496", "genie": "92607252", "bugs": "32179740" },
+      "image": "https://image.bugsm.co.kr/album/images/50/203843/20384317.jpg?version=20210401115619.0",
+      "tags": [
+        "잠들기전",
+        "비가주룩",
+        "산책할때",
+        "집으로가는길",
+        "이별후유증",
+        "울고싶은날",
+        "힐링이필요해",
+        "편안잔잔",
+        "SPECIAL"
+      ],
+      "URL_mv": "https://www.youtube.com/watch?v=yIcQXYFcobc"
+    },
+    {
+      "title": "헤어지지 말아요, 우리",
+      "artist": "도영 (DOYOUNG), 로코베리",
+      "album": "헤어지지 말아요, 우리",
+      "uid": { "melon": "31649820", "genie": "88668063", "bugs": "31489631" },
+      "image": "https://image.bugsm.co.kr/album/images/50/202350/20235068.jpg?version=20210421045151.0",
+      "tags": [
+        "잠들기전",
+        "비가주룩",
+        "산책할때",
+        "집으로가는길",
+        "이별후유증",
+        "울고싶은날",
+        "편안잔잔"
+      ],
+      "URL_mv": "https://www.youtube.com/watch?v=ezj4zIKjhQc"
+    },
+    {
+      "title": "헤어지지 말아요, 우리(Inst.)",
+      "artist": "도영 (DOYOUNG), 로코베리",
+      "album": "헤어지지 말아요, 우리",
+      "uid": { "melon": "31649821", "genie": "88668064", "bugs": "31489632" },
+      "image": "https://image.bugsm.co.kr/album/images/50/202350/20235068.jpg?version=20210421045151.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "아주 조금만 더",
+      "artist": "도영 (DOYOUNG)",
+      "album": "아주 조금만 더 (도영 X soundtrack#1)",
+      "uid": { "melon": "34670013", "genie": "96073216", "bugs": "6147843" },
+      "image": "https://image.bugsm.co.kr/album/images/50/40714/4071450.jpg?version=20220222180001.0",
+      "tags": [
+        "잠들기전",
+        "새벽감성",
+        "비가주룩",
+        "집으로가는길",
+        "이별후유증",
+        "울고싶은날",
+        "잔잔한/발라드",
+        "OST"
+      ],
+      "URL_mv": "https://www.youtube.com/watch?v=7abthqxbTzc",
+      "URL_tv": "https://www.youtube.com/watch?v=CsxDsFAylVQ"
+    }
+  ],
+  "taeil": [
+    {
+      "title": "단 한 사람 (Because Of You)",
+      "artist": "태일 (TAEIL)",
+      "album": "장사의 신 - 객주 2015 OST",
+      "uid": { "melon": "8058004", "genie": "85887083", "bugs": "30159201" },
+      "image": "https://image.bugsm.co.kr/album/images/50/200220/20022000.jpg?version=20200507002344.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "단 한 사람 (Because Of You)",
+      "artist": "태일 (TAEIL)",
+      "album": "장사의 신 - 객주 2015 OST Part.2 '단 한 사람 (Because Of You)'",
+      "uid": { "melon": "8032859", "genie": "85974652", "bugs": "30141093" },
+      "image": "https://image.bugsm.co.kr/album/images/50/200193/20019318.jpg?version=20200507002344.0",
+      "tags": [
+        "가을노래",
+        "겨울노래",
+        "잠들기전",
+        "새벽감성",
+        "비가주룩",
+        "집으로가는길",
+        "이별후유증",
+        "나만알기아까운",
+        "울고싶은날",
+        "힐링이필요해",
+        "편안잔잔",
+        "OST"
+      ]
+    },
+    {
+      "title": "아름다운 사람",
+      "artist": "태일 (TAEIL)",
+      "album": "아침이슬 50년, 김민기에 헌정하다 Vol.1",
+      "uid": { "melon": "33543864", "genie": "93463794", "bugs": "6113284" },
+      "image": "https://image.bugsm.co.kr/album/images/50/40468/4046840.jpg?version=20210727213110.0",
+      "tags": [
+        "가을노래",
+        "잠들기전",
+        "비가주룩",
+        "산책할때",
+        "집으로가는길",
+        "이별후유증",
+        "나만알기아까운",
+        "울고싶은날",
+        "힐링이필요해",
+        "편안잔잔"
+      ]
+    },
+    {
+      "title": "아침이슬",
+      "artist": "태일 (TAEIL), 한영애, 노래를 찾는 사람들, 메이트리 (Maytree), 박학기, 알리 (ALi), 웬디 (WENDY), 유리상자, 윤도현, 윤종신, 이날치, 이은미, 장필순, 크라잉넛 (CRYING NUT), 황정민",
+      "album": "아침이슬 50년, 김민기에 헌정하다 Vol.4",
+      "uid": { "melon": "33626297", "genie": "93619777", "bugs": "6116607" },
+      "image": "https://image.bugsm.co.kr/album/images/50/40522/4052237.jpg?version=20210730003349.0",
+      "tags": [
+        "가을노래",
+        "굿모닝",
+        "잠들기전",
+        "새벽감성",
+        "비가주룩",
+        "집으로가는길",
+        "이별후유증",
+        "나만알기아까운",
+        "울고싶은날",
+        "힐링이필요해",
+        "편안잔잔"
+      ],
+      "URL_mv": "https://www.youtube.com/watch?v=sTXxCCOobFk"
+    },
+    {
+      "title": "보라색 (Feat. 태일 of NCT)",
+      "artist": "솔희 (SOHLHEE)",
+      "album": "보라색",
+      "uid": { "melon": "31703479", "genie": "88727918", "bugs": "31526372" },
+      "image": "https://image.bugsm.co.kr/album/images/50/202418/20241874.jpg?version=20190402042142.0",
+      "tags": [
+        "나른한오후",
+        "새벽감성",
+        "비가주룩",
+        "이별후유증",
+        "울고싶은날",
+        "몽환적인"
+      ],
+      "URL_mv": "https://www.youtube.com/watch?v=mRwxB2AW5HA"
+    },
+    {
+      "title": "Love Right Back (Feat. 태일 of NCT, lIlBOI)",
+      "artist": "Raiden",
+      "album": "Love Right Back - The 1st Mini Album",
+      "uid": { "melon": "34063336", "genie": "94546095", "bugs": "32352670" },
+      "image": "https://image.bugsm.co.kr/album/images/50/204252/20425256.jpg?version=20211019002339.0",
+      "tags": [
+        "잠들기전",
+        "새벽감성",
+        "비가주룩",
+        "기분전환",
+        "이별후유증",
+        "울고싶은날"
+      ],
+      "URL_mv": "https://www.youtube.com/watch?v=apogZTk06-U"
+    },
+    {
+      "title": "Starlight",
+      "artist": "태일 (TAEIL)",
+      "album": "스물다섯 스물하나 OST Part 1",
+      "image": "https://image.bugsm.co.kr/album/images/200/40711/4071134.jpg?version=20220214063055.0",
+      "uid": { "bugs": "6146768", "melon": "34632361", "genie": "95999197" },
+      "tags": [
+        "여름노래",
+        "굿모닝",
+        "햇살가득",
+        "공부할때",
+        "산책할때",
+        "출근길에",
+        "드라이브",
+        "설렘가득LOVE",
+        "기분전환",
+        "힐링이필요해",
+        "달콤달콤",
+        "OST"
+      ],
+      "URL_mv": "https://www.youtube.com/watch?v=RNj-GhxPM0g"
+    }
+  ],
+  "mark": [
+    {
+      "title": "Lemonade Love",
+      "artist": "마크 (MARK), 박재정",
+      "album": "Lemonade Love - SM STATION",
+      "uid": { "melon": "30537490", "genie": "87307312", "bugs": "30725856" },
+      "image": "https://image.bugsm.co.kr/album/images/50/201094/20109444.jpg?version=20190402040502.0",
+      "tags": [
+        "여름노래",
+        "굿모닝",
+        "햇살가득",
+        "공부할때",
+        "산책할때",
+        "출근길에",
+        "드라이브",
+        "설렘가득LOVE",
+        "기분전환",
+        "해피바이러스",
+        "상큼청량",
+        "달콤달콤",
+        "이지리스닝",
+        "SM STATION"
+      ],
+      "URL_mv": "https://www.youtube.com/watch?v=wFPd3eN64mc"
+    },
+    {
+      "title": "Lemonade Love (Inst.)",
+      "artist": "마크 (MARK), 박재정",
+      "album": "Lemonade Love - SM STATION",
+      "uid": { "melon": "30537491", "genie": "87307313", "bugs": "30725857" },
+      "image": "https://image.bugsm.co.kr/album/images/50/201094/20109444.jpg?version=20190402040821.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "Young & Free",
+      "artist": "마크 (MARK), 시우민 (XIUMIN)",
+      "album": "Young & Free - SM STATION",
+      "uid": { "melon": "30512150", "genie": "87266810", "bugs": "30709979" },
+      "image": "https://image.bugsm.co.kr/album/images/50/201069/20106910.jpg?version=20190402041855.0",
+      "tags": [
+        "여름노래",
+        "굿모닝",
+        "햇살가득",
+        "공부할때",
+        "산책할때",
+        "여행갈때",
+        "드라이브",
+        "기분전환",
+        "자신감뿜뿜",
+        "힐링이필요해",
+        "해피바이러스",
+        "상큼청량",
+        "SM STATION"
+      ],
+      "URL_mv": "https://www.youtube.com/watch?v=gfbRLbMuGSs"
+    },
+    {
+      "title": "Young & Free (Inst.)",
+      "artist": "마크 (MARK), 시우민 (XIUMIN)",
+      "album": "Young & Free - SM STATION",
+      "uid": { "melon": "30512151", "genie": "87266811", "bugs": "30709980" },
+      "image": "https://image.bugsm.co.kr/album/images/50/201069/20106910.jpg?version=20190402042308.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "나라는 꿈",
+      "artist": "마크 (MARK), 조이 (JOY)",
+      "album": "오늘의 탐정 OST",
+      "uid": { "melon": "31392347", "genie": "88341299", "bugs": "31293671" },
+      "image": "https://image.bugsm.co.kr/album/images/50/202042/20204289.jpg?version=20210819005032.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "나라는 꿈",
+      "artist": "마크 (MARK), 조이 (JOY)",
+      "album": "오늘의 탐정 OST Part 6",
+      "uid": { "melon": "31365898", "genie": "88303495", "bugs": "31277608" },
+      "image": "https://image.bugsm.co.kr/album/images/50/202013/20201301.jpg?version=20190910045940.0",
+      "tags": [
+        "잠들기전",
+        "새벽감성",
+        "비가주룩",
+        "이별후유증",
+        "울고싶은날",
+        "몽환적인",
+        "편안잔잔",
+        "OST"
+      ]
+    },
+    {
+      "title": "나라는 꿈 (Inst.)",
+      "artist": "마크 (MARK), 조이 (JOY)",
+      "album": "오늘의 탐정 OST Part 6",
+      "uid": { "melon": "31365899", "genie": "88303496", "bugs": "31277609" },
+      "image": "https://image.bugsm.co.kr/album/images/50/202013/20201301.jpg?version=20190910045940.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "두고가 (Drop) (Feat. 슬기 Of Red Velvet)",
+      "artist": "마크 (MARK)",
+      "album": "고등래퍼 FINAL",
+      "uid": { "melon": "30337189", "genie": "87047183", "bugs": "30606132" },
+      "image": "https://image.bugsm.co.kr/album/images/50/200902/20090297.jpg?version=20190910044907.0",
+      "tags": [
+        "여름노래",
+        "굿모닝",
+        "산책할때",
+        "울고싶은날",
+        "자신감뿜뿜",
+        "힐링이필요해",
+        "비트맛집"
+      ]
+    },
+    {
+      "title": "니 맘에 들어갈래 (Feat. Mark of NCT)",
+      "artist": "헨리 (HENRY)",
+      "album": "우리집에 사는 남자 OST Track.2",
+      "uid": { "melon": "30056776", "genie": "86688897", "bugs": "4806100" },
+      "image": "https://image.bugsm.co.kr/album/images/200/5971/597111.jpg?version=20191026041055.0",
+      "tags": ["굿모닝", "햇살가득", "설렘가득LOVE", "달콤달콤", "OST"]
+    },
+    {
+      "title": "Child",
+      "artist": "마크 (MARK)",
+      "album": "Child - SM STATION : NCT LAB",
+      "image": "https://image.bugsm.co.kr/album/images/200/204490/20449017.jpg?version=20220205004714.0",
+      "uid": { "bugs": "32459344", "melon": "34599641", "genie": "95928015" },
+      "tags": [
+        "잠들기전",
+        "새벽감성",
+        "비가주룩",
+        "집으로가는길",
+        "기분전환",
+        "이별후유증",
+        "울고싶은날",
+        "힐링이필요해",
+        "편안잔잔",
+        "SMSTATION"
+      ],
+      "URL_mv": "https://www.youtube.com/watch?v=VbIf3z2SqHg",
+      "URL_tv": "https://www.youtube.com/watch?v=5kQVtdNsMGM"
+    }
+  ],
+  "taeyong": [
+    {
+      "title": "AROUND",
+      "artist": "태용 (TAEYONG), Hitchhiker",
+      "album": "AROUND - SM STATION",
+      "uid": { "melon": "30410067", "genie": "87130289", "bugs": "30650545" },
+      "image": "https://image.bugsm.co.kr/album/images/50/200969/20096932.jpg?version=20190402040820.0",
+      "tags": [
+        "운동할때",
+        "월요병퇴치",
+        "신나는불금",
+        "밤샘노동요",
+        "스트레스아웃",
+        "자신감뿜뿜",
+        "전투력상승",
+        "마라네오",
+        "비트맛집",
+        "SM STATION"
+      ],
+      "URL_mv": "https://www.youtube.com/watch?v=aL_mTKWwRto"
+    },
+    {
+      "title": "AROUND (Inst.)",
+      "artist": "태용 (TAEYONG), Hitchhiker",
+      "album": "AROUND - SM STATION",
+      "uid": { "melon": "30410068", "genie": "87130289", "bugs": "30650546" },
+      "image": "https://image.bugsm.co.kr/album/images/50/200969/20096932.jpg?version=20190402041351.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "Long Flight",
+      "artist": "태용 (TAEYONG)",
+      "album": "Long Flight - SM STATION",
+      "uid": { "melon": "31934966", "genie": "89236752", "bugs": "31655083" },
+      "image": "https://image.bugsm.co.kr/album/images/50/202665/20266576.jpg?version=20190719111000.0",
+      "tags": [
+        "잠들기전",
+        "새벽감성",
+        "공부할때",
+        "산책할때",
+        "설렘가득LOVE",
+        "기분전환",
+        "내적댄스",
+        "달콤달콤",
+        "몽환적인",
+        "SM STATION"
+      ],
+      "URL_mv": "https://www.youtube.com/watch?v=SvV49SD99DY"
+    },
+    {
+      "title": "Long Flight (Inst.)",
+      "artist": "태용 (TAEYONG)",
+      "album": "Long Flight - SM STATION",
+      "uid": { "melon": "31934967", "genie": "89236753", "bugs": "31655084" },
+      "image": "https://image.bugsm.co.kr/album/images/50/202665/20266576.jpg?version=20190719111000.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "러브 델루나",
+      "artist": "태용 (TAEYONG), 펀치 (Punch)",
+      "album": "호텔 델루나 OST",
+      "uid": { "melon": "32021726", "genie": "89339361", "bugs": "31689246" },
+      "image": "https://image.bugsm.co.kr/album/images/50/202744/20274452.jpg?version=20210902181018.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "러브 델루나",
+      "artist": "태용 (TAEYONG), 펀치 (Punch)",
+      "album": "호텔 델루나 OST Part.13",
+      "uid": { "melon": "32006894", "genie": "89327398", "bugs": "31683882" },
+      "image": "https://image.bugsm.co.kr/album/images/50/202731/20273127.jpg?version=20210902181017.0",
+      "tags": [
+        "겨울노래",
+        "잠들기전",
+        "새벽감성",
+        "공부할때",
+        "산책할때",
+        "설렘가득LOVE",
+        "달콤달콤",
+        "몽환적인",
+        "OST"
+      ]
+    },
+    {
+      "title": "러브 델루나 (Inst.)",
+      "artist": "태용 (TAEYONG), 펀치 (Punch)",
+      "album": "호텔 델루나 OST Part.13",
+      "uid": { "melon": "32006895", "genie": "89327399", "bugs": "31683883" },
+      "image": "https://image.bugsm.co.kr/album/images/50/202731/20273127.jpg?version=20210902181017.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "함께 (Cure)",
+      "artist": "태용 (TAEYONG), 유영진",
+      "album": "함께 (Cure) - SM STATION",
+      "uid": { "melon": "30566058", "genie": "87359251", "bugs": "30742274" },
+      "image": "https://image.bugsm.co.kr/album/images/50/201120/20112045.jpg?version=20190402041127.0",
+      "tags": [
+        "여름노래",
+        "잠들기전",
+        "새벽감성",
+        "공부할때",
+        "비가주룩",
+        "집으로가는길",
+        "행운을부르는",
+        "나만알기아까운",
+        "울고싶은날",
+        "힐링이필요해",
+        "SM STATION"
+      ],
+      "URL_mv": "https://www.youtube.com/watch?v=Fila4yLICUE"
+    },
+    {
+      "title": "함께 (Cure) (Inst.)",
+      "artist": "태용 (TAEYONG), 유영진",
+      "album": "함께 (Cure) - SM STATION",
+      "uid": { "melon": "30566059", "genie": "87359252", "bugs": "30742275" },
+      "image": "https://image.bugsm.co.kr/album/images/50/201120/20112045.jpg?version=20190402040552.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "Love Theory",
+      "artist": "태용 (TAEYONG), 원슈타인",
+      "album": "Love Theory - SM STATION",
+      "image": "https://image.bugsm.co.kr/album/images/200/204622/20462260.jpg?version=20220415005317.0",
+      "uid": { "bugs": "32517915", "melon": "34899925", "genie": "96547837" },
+      "tags": [
+        "여름노래",
+        "나른한오후",
+        "산책할때",
+        "집으로가는길",
+        "설렘가득LOVE",
+        "기분전환",
+        "나만알기아까운",
+        "해피바이러스",
+        "달콤달콤",
+        "몽환적인",
+        "이지리스닝",
+        "SMSTATION"
+      ],
+      "URL_mv": "https://www.youtube.com/watch?v=lKAiv1jmVxA"
+    }
+  ],
+  "ten": [
+    {
+      "title": "New Heroes",
+      "artist": "텐 (TEN)",
+      "album": "New Heroes - SM STATION",
+      "uid": { "melon": "31003648", "genie": "87888404", "bugs": "31018984" },
+      "image": "https://image.bugsm.co.kr/album/images/50/201583/20158393.jpg?version=20190402041601.0",
+      "tags": [
+        "새벽감성",
+        "비가주룩",
+        "울고싶은날",
+        "자신감뿜뿜",
+        "전투력상승",
+        "치명섹시",
+        "SM STATION"
+      ],
+      "URL_mv": "https://www.youtube.com/watch?v=VM-g_bkFdzo",
+      "URL_dance": "https://www.youtube.com/watch?v=DtO1TlSQPxg"
+    },
+    {
+      "title": "New Heroes (Inst.)",
+      "artist": "텐 (TEN)",
+      "album": "New Heroes - SM STATION",
+      "uid": { "melon": "31003649", "genie": "87888405", "bugs": "31018985" },
+      "image": "https://image.bugsm.co.kr/album/images/50/201583/20158393.jpg?version=20190402042059.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "Paint Me Naked",
+      "artist": "텐 (TEN)",
+      "album": "Paint Me Naked - SM STATION",
+      "uid": { "melon": "33789496", "genie": "93993352", "bugs": "32308557" },
+      "image": "https://image.bugsm.co.kr/album/images/50/204144/20414459.jpg?version=20211020005627.0",
+      "tags": [
+        "여름노래",
+        "굿모닝",
+        "햇살가득",
+        "공부할때",
+        "산책할때",
+        "출근길에",
+        "드라이브",
+        "설렘가득LOVE",
+        "기분전환",
+        "해피바이러스",
+        "상큼청량",
+        "달콤달콤",
+        "SM STATION"
+      ],
+      "URL_mv": "https://www.youtube.com/watch?v=dOZyZiJ9n_8",
+      "URL_dance": "https://www.youtube.com/watch?v=XMJWjuIUAUo",
+      "URL_tv": "https://www.youtube.com/watch?v=SqsyOM9sw0A"
+    },
+    {
+      "title": "Paint Me Naked (Inst.)",
+      "artist": "텐 (TEN)",
+      "album": "Paint Me Naked - SM STATION",
+      "uid": { "melon": "33789497", "genie": "93993353", "bugs": "32308558" },
+      "image": "https://image.bugsm.co.kr/album/images/50/204144/20414459.jpg?version=20211020005627.0",
+      "tags": ["NO_TAG"]
+    },
+    {
+      "title": "夢中夢 (몽중몽; Dream In A Dream)",
+      "artist": "텐 (TEN)",
+      "album": "夢中夢 (몽중몽; Dream In A Dream) - SM STATION",
+      "uid": { "melon": "30348438", "genie": "87067282", "bugs": "30613349" },
+      "image": "https://image.bugsm.co.kr/album/images/50/200914/20091432.jpg?version=20190402040643.0",
+      "tags": ["잠들기전", "새벽감성", "비가주룩", "몽환적인, SM STATION"],
+      "URL_mv": "https://www.youtube.com/watch?v=V4gCv1CifJg",
+      "URL_dance": "https://www.youtube.com/watch?v=aKDKDuDPgls",
+      "URL_tv": "https://www.youtube.com/watch?v=UZVQWVrVYfY"
+    },
+    {
+      "title": "夢中夢 (몽중몽; Dream In A Dream) (Inst.)",
+      "artist": "텐 (TEN)",
+      "album": "夢中夢 (몽중몽; Dream In A Dream) - SM STATION",
+      "uid": { "melon": "30348439", "genie": "87067282", "bugs": "30613350" },
+      "image": "https://image.bugsm.co.kr/album/images/50/200914/20091432.jpg?version=20190402041127.0",
+      "tags": ["NO_TAG"]
+    }
+  ],
+  "haechan": [
+    {
+      "title": "좋은 사람 (2022)",
+      "artist": "해찬 (HAECHAN)",
+      "album": "좋은 사람 (2022)",
+      "uid": { "melon": "34725801", "genie": "96176220", "bugs": "32482994" },
+      "image": "https://image.bugsm.co.kr/album/images/50/204544/20454409.jpg?version=20220315004513.0",
+      "tags": [
+        "가을노래",
+        "굿모닝",
+        "햇살가득",
+        "공부할때",
+        "산책할때",
+        "출근길에",
+        "드라이브",
+        "설렘가득LOVE",
+        "기분전환",
+        "힐링이필요해",
+        "편안잔잔",
+        "달달설렘",
+        "OST"
+      ]
+    }
+  ]
+}
