@@ -8,8 +8,6 @@
 
 import { SongType } from '../types/record.result.types';
 
-let tagCount: number;
-let tagsArr: string[];
 let tags: string[] = []; // 사용자가 선택한 모든 태그들
 let remainTags: string[] = []; // 콘서트, 그룹, 타이틀 제외한 태그들
 let songs: SongType[] = []; // 태그 합집합 노래들
@@ -54,8 +52,6 @@ async function fetchConcert() {
 
 // 2. 선택된 태그들 localStorage에서 가져오기
 function loadTags(tags: string[]) {
-  tagsArr = [...tags];
-  tagCount = tags.length;
   tags = [...tags];
   remainTags = [...tags];
 

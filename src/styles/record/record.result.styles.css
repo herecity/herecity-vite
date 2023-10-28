@@ -1,28 +1,46 @@
 .record-result-root {
-  background-color: var(--color-green);
-}
-.record-result-root .main {
-  padding: 0 20px;
+  background-color: var(--color-white);
 }
 .record-result-root .main .header {
   word-break: keep-all;
   white-space: pre-wrap;
   text-align: center;
-  padding: 100px 0;
+  padding: 100px 20px;
   font-size: 30px;
+  font-weight: 700;
+  color: var(--color-green-darken);
+}
+.record-result-root .main .share-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: var(--color-grey100);
+  padding: 12px 20px;
+}
+.record-result-root .main .share-container button > img {
+  width: 40px;
+  height: 40px;
+}
+.record-result-root .main .playlist-section {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-green);
+  padding: 30px 20px;
 }
 .record-result-root .main .playlist-section ul {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  max-width: 600px;
 }
 .record-result-root .main .playlist-section ul .song-container {
   display: flex;
   align-items: center;
   gap: 16px;
-  background-color: var(--color-green-lighten);
-  padding: 8px;
+  padding: 12px;
   border-radius: var(--border-radius);
+  background-color: var(--color-white);
 }
 .record-result-root .main .playlist-section ul .song-container .thumbnail {
   width: 50px;
@@ -33,17 +51,50 @@
   width: 200px;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .record-result-root .main .playlist-section ul .song-container .artist {
   width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .record-result-root .main .playlist-section ul .song-container .tags {
   flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.record-result-root .main .playlist-section ul .song-container .tags .bar {
+  flex: 1;
+  height: 10px;
+  background-color: var(--color-green-darken);
+  border-radius: var(--border-radius);
+}
+.record-result-root .main .playlist-section ul .song-container .tags .bar.not {
+  background-color: var(--color-green-lighten);
+}
+.record-result-root .add-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-green-darken);
+  border-radius: 50%;
+}
+.record-result-root .add-btn img {
+  width: 40px;
+  height: 40px;
 }
 
 @media (max-width: 600px) {
   .record-result-root .main .header {
+    padding: 80px 20px;
     font-size: 24px;
+  }
+  .record-result-root .main .playlist-section {
+    padding: 40px 20px;
   }
   .record-result-root .main .playlist-section ul {
     display: flex;

@@ -1,8 +1,14 @@
 import Navbar from '@components/common/Navbar';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { SongType } from './types/record.result.types';
 import { startTagSearch } from './utils/createPlaylist';
 import '@styles/record/record.result.styles.css';
+import { images } from '@assets/images';
+import {
+  bugsClickListener,
+  genieClickListener,
+  melonClickListener,
+} from './utils/createDepplink';
 
 const RecordResult = () => {
   const [tags, setTags] = useState<Set<string>>(new Set());
@@ -11,7 +17,6 @@ const RecordResult = () => {
   const loadSongs = async (tags: string[]) => {
     const songs = await startTagSearch(tags);
     setSongs(songs);
-    console.log(songs);
   };
 
   const loadTags = () => {
@@ -35,7 +40,17 @@ const RecordResult = () => {
             songs.length
           }개의 곡을 추천합니다`}
         </h2>
-        <div></div>
+        <div className='share-container'>
+          <button onClick={() => bugsClickListener(songs)}>
+            <img src={images.bugs} alt='' />
+          </button>
+          <button onClick={() => melonClickListener(songs)}>
+            <img src={images.melon} alt='' />
+          </button>
+          <button onClick={() => genieClickListener(songs)}>
+            <img src={images.genie} alt='' />
+          </button>
+        </div>
         <section className='playlist-section'>
           <ul>
             {songs.map((song) => {
@@ -46,9 +61,18 @@ const RecordResult = () => {
                   </div>
                   <div className='item title'>{song.title}</div>
                   <div className='item artist'>{song.artist}</div>
-                  {/* <div className='item tags'>
-                    {song.tags.filter((tag) => tags.has(tag)).join(', ')}
-                  </div> */}
+                  <div className='item tags'>
+                    {song.tags
+                      .filter((tag) => tags.has(tag))
+                      .map((_) => (
+                        <div className='bar' />
+                      ))}
+                    {Array(3 - song.tags.filter((tag) => tags.has(tag)).length)
+                      .fill(0)
+                      .map((_) => (
+                        <div className='bar not' />
+                      ))}
+                  </div>
                 </li>
               );
             })}

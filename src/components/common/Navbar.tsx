@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import '@styles/common/navbar.styles.css';
 
@@ -34,7 +34,7 @@ const Navbar = memo(() => {
       <ul className='tab-list-container'>
         {tabList.map((tab) => {
           return (
-            <Link to={tab.tab}>
+            <Link to={`/${tab.tab}`}>
               <li>{tab.name}</li>
             </Link>
           );

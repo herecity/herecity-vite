@@ -1,5 +1,5 @@
 import Navbar from '@components/common/Navbar';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import '@styles/record/record.styles.css';
 import { useNavigate } from 'react-router-dom';
 
