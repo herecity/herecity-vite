@@ -2,7 +2,7 @@ import Navbar from '@components/common/Navbar';
 import { useEffect, useState } from 'react';
 import { SongType } from './types/record.result.types';
 import { startTagSearch } from './utils/createPlaylist';
-import '@styles/record/record.result.styles.css';
+import './styles/record.result.styles.scss';
 import { images } from '@assets/images';
 import {
   bugsClickListener,
@@ -10,6 +10,7 @@ import {
   melonClickListener,
 } from './utils/createDepplink';
 import Loading from '@components/common/Loading';
+import Song from './components/Song';
 
 const RecordResult = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -54,34 +55,13 @@ const RecordResult = () => {
             <img src={images.genie} alt='' />
           </button>
         </div>
-        {isLoading && <Loading />}
-        {songs.length > 0 && (
+        {isLoading ? (
+          <Loading />
+        ) : (
           <section className='playlist-section'>
             <ul>
-              {songs.map((song) => {
-                return (
-                  <li className='song-container'>
-                    <div className='item thumbnail'>
-                      <img className='thumbnail ' src={song.image} alt='' />
-                    </div>
-                    <div className='item title'>{song.title}</div>
-                    <div className='item artist'>{song.artist}</div>
-                    <div className='item tags'>
-                      {song.tags
-                        .filter((tag) => tags.has(tag))
-                        .map((_) => (
-                          <div className='bar' />
-                        ))}
-                      {Array(
-                        3 - song.tags.filter((tag) => tags.has(tag)).length,
-                      )
-                        .fill(0)
-                        .map((_) => (
-                          <div className='bar not' />
-                        ))}
-                    </div>
-                  </li>
-                );
+              {songs.map((song, idx) => {
+                return <Song song={song} tags={tags} key={idx} />;
               })}
             </ul>
           </section>

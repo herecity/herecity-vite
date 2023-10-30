@@ -13,4 +13,11 @@ export default defineConfig({
       '@routes': '/src/routes',
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "./src/styles/_utils";',
+      },
+    },
+  },
 });

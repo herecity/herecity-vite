@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
-import '@styles/common/navbar.styles.css';
+import '@styles/common/navbar.styles.scss';
 
 export const tabList = [
   {
@@ -27,19 +27,21 @@ export const tabList = [
 
 const Navbar = memo(() => {
   return (
-    <nav className='navbar-container'>
-      <Link to={'/'}>
-        <span className='logo'>{'HERECITY'}</span>
-      </Link>
-      <ul className='tab-list-container'>
-        {tabList.map((tab) => {
-          return (
-            <Link to={`/${tab.tab}`}>
-              <li>{tab.name}</li>
-            </Link>
-          );
-        })}
-      </ul>
+    <nav className='navbar-root'>
+      <div className='navbar-container'>
+        <Link to={'/'}>
+          <span className='logo'>{'HERECITY'}</span>
+        </Link>
+        <ul className='tab-list-container'>
+          {tabList.map((tab) => {
+            return (
+              <Link to={`/${tab.tab}`}>
+                <li>{tab.name}</li>
+              </Link>
+            );
+          })}
+        </ul>
+      </div>
     </nav>
   );
 });

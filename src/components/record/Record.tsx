@@ -1,6 +1,6 @@
 import Navbar from '@components/common/Navbar';
 import { useState } from 'react';
-import '@styles/record/record.styles.css';
+import './styles/record.styles.scss';
 import { useNavigate } from 'react-router-dom';
 
 const Record = () => {
@@ -88,7 +88,7 @@ export const musicKeywords = [
       '설렘가득LOVE',
       '이별후유증',
       '행운을부르는',
-    ],
+    ] as const,
   },
   {
     name: '감정/기분',
@@ -102,7 +102,7 @@ export const musicKeywords = [
       '전투력상승',
       '힐링이필요해',
       '해피바이러스',
-    ],
+    ] as const,
   },
   {
     name: '뮤직스타일',
@@ -116,7 +116,7 @@ export const musicKeywords = [
       '편안잔잔',
       '이지리스닝',
       '수능금지곡',
-    ],
+    ] as const,
   },
   {
     name: '유닛/기타',
@@ -129,6 +129,6 @@ export const musicKeywords = [
       'OST',
       'SM STATION',
       'SPECIAL',
-    ],
+    ] as const,
   },
 ];

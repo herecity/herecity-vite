@@ -6,19 +6,19 @@
   transition: background-color 300ms ease-in;
 
   &.record {
-    background-color: var(--color-green);
+    background-color: $green;
   }
 
   &.city-board {
-    background-color: var(--color-blue);
+    background-color: $blue;
   }
 
   &.nchelin {
-    background-color: var(--color-pink);
+    background-color: $pink;
   }
 
   &.nbti {
-    background-color: var(--color-yellow);
+    background-color: $yellow;
   }
 
   & > nav,
@@ -33,7 +33,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: var(--max-page-width);
+    max-width: $max-page-width;
 
     .slide-container {
       display: flex;
@@ -67,6 +67,6 @@
   }
 
   .swiper-pagination-bullet-active {
-    background-color: var(--color-black);
+    background-color: $black;
   }
 }

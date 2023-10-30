@@ -1,5 +1,5 @@
 {
-  "doyoung": [
+  "solo": [
     {
       "title": "COOL",
       "artist": "도영 (DOYOUNG), 키 (KEY)",
@@ -251,9 +251,7 @@
       ],
       "URL_mv": "https://www.youtube.com/watch?v=7abthqxbTzc",
       "URL_tv": "https://www.youtube.com/watch?v=CsxDsFAylVQ"
-    }
-  ],
-  "taeil": [
+    },
     {
       "title": "단 한 사람 (Because Of You)",
       "artist": "태일 (TAEIL)",
@@ -519,9 +517,7 @@
       ],
       "URL_mv": "https://www.youtube.com/watch?v=VbIf3z2SqHg",
       "URL_tv": "https://www.youtube.com/watch?v=5kQVtdNsMGM"
-    }
-  ],
-  "taeyong": [
+    },
     {
       "title": "AROUND",
       "artist": "태용 (TAEYONG), Hitchhiker",
@@ -662,9 +658,7 @@
         "SMSTATION"
       ],
       "URL_mv": "https://www.youtube.com/watch?v=lKAiv1jmVxA"
-    }
-  ],
-  "ten": [
+    },
     {
       "title": "New Heroes",
       "artist": "텐 (TEN)",
@@ -742,9 +736,7 @@
       "uid": { "melon": "30348439", "genie": "87067282", "bugs": "30613350" },
       "image": "https://image.bugsm.co.kr/album/images/50/200914/20091432.jpg?version=20190402041127.0",
       "tags": ["NO_TAG"]
-    }
-  ],
-  "haechan": [
+    },
     {
       "title": "좋은 사람 (2022)",
       "artist": "해찬 (HAECHAN)",
