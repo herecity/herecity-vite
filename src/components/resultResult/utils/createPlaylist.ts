@@ -1,7 +1,7 @@
 /*
   선택된 태그들에 해당하는 노래 검색해서 보여주기
   1. json 에서 데이터 가져오기
-  2. 선택된 태그들 localStorage에서 가져오기
+  2. 선택된 태그들 가져오기
   3. 태그 우선 순위에 따라 노래 고르기 ( 그룹별, 콘서트 )
   4. 찾은 노래들 보여주기
 */
@@ -58,8 +58,9 @@ async function fetchConcert() {
 }
 
 // 2. 선택된 태그들 localStorage에서 가져오기
-function loadTags(tags: string[]) {
-  tags = [...tags];
+function loadTags(tagList: string[]) {
+  console.log(tags);
+  tags = [...tagList];
   remainTags = [...tags];
 
   // console.log(`[loadTags] 선택 태그는 ${tagCount} 개 - ${tags} `);
@@ -146,12 +147,7 @@ async function fetchAllData() {
   songs.push(...(await fetchNCTDREAM())['NCT DREAM']);
   songs.push(...(await fetchNCTU())['NCT U']);
   songs.push(...(await fetchWAYV())['WayV']);
-  songs.push(...(await fetchSOLO())['doyoung']);
-  songs.push(...(await fetchSOLO())['taeil']);
-  songs.push(...(await fetchSOLO())['mark']);
-  songs.push(...(await fetchSOLO())['taeyong']);
-  songs.push(...(await fetchSOLO())['ten']);
-  songs.push(...(await fetchSOLO())['haechan']);
+  songs.push(...(await fetchSOLO())['solo']);
 }
 
 // 콘서트, 그룹, 타이틀 제외 태그 (remainTags) 함수 처리
@@ -182,7 +178,7 @@ function handleOtherTags() {
 async function handleTags() {
   if (isConcertInTag()) {
     await handleConcertTag();
-    // console.log('CONCERT');
+    console.log('CONCERT');
     return;
   }
   if (isGroupInTag()) {
@@ -219,9 +215,9 @@ function sortByRelease() {
   allTaggedSongs.sort((a, b) => sortFunction(a, b));
 }
 
-export async function startTagSearch(tags: string[]) {
+export async function startTagSearch(tagList: string[]) {
   resetItems();
-  loadTags(tags);
+  loadTags(tagList);
   await handleTags();
   sortByRelease();
   return songs;
