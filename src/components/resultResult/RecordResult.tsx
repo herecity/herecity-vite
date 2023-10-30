@@ -1,4 +1,4 @@
-import Navbar from '@components/common/Navbar';
+import Navbar from '@components/common/Navbar/Navbar';
 import { useEffect, useState } from 'react';
 import { SongType } from './types/record.result.types';
 import { startTagSearch } from './utils/createPlaylist';
@@ -9,7 +9,7 @@ import {
   genieClickListener,
   melonClickListener,
 } from './utils/createDepplink';
-import Loading from '@components/common/Loading';
+import Loading from '@components/common/Loading/Loading';
 import Song from './components/Song';
 
 const RecordResult = () => {

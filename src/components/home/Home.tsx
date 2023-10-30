@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import './styles/home.styles.scss';
-import Navbar, { tabList } from '@components/common/Navbar';
+import Navbar, { tabList } from '@components/common/Navbar/Navbar';
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState(0);
