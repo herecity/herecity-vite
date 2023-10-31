@@ -1,10 +1,11 @@
+import NotFoundPage from '@pages/NotFoundPage';
+import CityBoard from '@pages/cityboard/CityBoard';
+import HomePage from '@pages/home/HomePage';
+import Nbti from '@pages/nbti/Nbti';
+import Nchelin from '@pages/nchelin/Nchelin';
+import RecordPage from '@pages/record/RecordPage';
+import RecordResultPage from '@pages/record/RecordResultPage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import CityBoard from '../pages/cityboard/CityBoard';
-import Nchelin from '../pages/nchelin/Nchelin';
-import Nbti from '../pages/nbti/Nbti';
-import RecordPage from '../pages/record/RecordPage';
-import RecordResultPage from '../pages/record/RecordResultPage';
-import HomePage from '../pages/home/HomePage';
 
 const RootRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const RootRoutes = () => {
         <Route path='/city-board' element={<CityBoard />} />
         <Route path='/nchelin' element={<Nchelin />} />
         <Route path='/nbti' element={<Nbti />} />
+        <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );
