@@ -1,9 +1,11 @@
 ## 프로젝트 소개
 
-https://here-city.com
+https://here-city.com  
+
 엔시티 찐팬인 친구의 기획으로 시작한 시즈니를 위한 웹페이지입니다.
 
 > 시즈니의, 시즈니에 의한, 시즈니를 위한 서비스
+
 
 기능은
 
@@ -58,21 +60,23 @@ https://here-city.com
 
 ## 📂 디렉토리 구조
 
-> 📦src
-> ┣ 📂assets
-> ┣ 📂components
-> ┃ ┣ 📂xComponent
-> ┃ ┃ ┣ 📂components
-> ┃ ┃ ┣ 📂styles
-> ┃ ┃ ┣ 📂types
-> ┃ ┃ ┣ 📂utils
-> ┃ ┃ ┗ 📜XComponent.tsx
-> ┃ ┗ 📜App.tsx
-> ┣ 📂pages
-> ┣ 📂routes
-> ┣ 📂styles
-> ┣ 📂utils
-> ┗ 📜main.tsx
+```
+📦src
+ ┣ 📂assets
+ ┣ 📂components
+ ┃ ┣ 📂xComponent
+ ┃ ┃ ┣ 📂components
+ ┃ ┃ ┣ 📂styles
+ ┃ ┃ ┣ 📂types
+ ┃ ┃ ┣ 📂utils
+ ┃ ┃ ┗ 📜XComponent.tsx
+ ┃ ┗ 📜App.tsx
+ ┣ 📂pages
+ ┣ 📂routes
+ ┣ 📂styles
+ ┣ 📂utils
+ ┗ 📜main.tsx
+```
 
 <br />
 
