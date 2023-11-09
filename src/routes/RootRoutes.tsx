@@ -1,6 +1,5 @@
 import NotFoundPage from '@pages/NotFoundPage';
 import CityBoardPage from '@pages/cityboard/CityBoardPage';
-import CityBoard from '@pages/cityboard/CityBoardPage';
 import HomePage from '@pages/home/HomePage';
 import Nbti from '@pages/nbti/Nbti';
 import Nchelin from '@pages/nchelin/Nchelin';

@@ -23,9 +23,6 @@ button {
   outline: 0;
 }
 
-input {
-}
-
 ul,
 li {
   list-style: none;
@@ -33,7 +30,7 @@ li {
 
 a {
   text-decoration: none;
-  color: var(--color-black);
+  color: $black;
 }
 
 body {

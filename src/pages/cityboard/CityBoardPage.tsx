@@ -1,7 +1,7 @@
-import CityboardMain from '@components/cityboardMain/CityboardMain';
+import Cityboard from '@components/cityboard/Cityboard';
 
 const CityBoardPage = () => {
-  return <CityboardMain />;
+  return <Cityboard />;
 };
 
 export default CityBoardPage;

@@ -1,5 +1,5 @@
-import { Fragment, useEffect, useState } from 'react';
-// import SearchBar from './components/SearchBar';
+import { useState } from 'react';
+import SearchBar from './components/SearchBar';
 import { useCityboard } from './hooks/useCityboard';
 import {
   CityBoardEmojiType,
@@ -9,8 +9,9 @@ import {
 import Loading from '@components/common/Loading/Loading';
 import Navbar from '@components/common/Navbar/Navbar';
 import './styles/cityboard.styles.scss';
+import CityboardItem from './components/CityboardItem';
 
-const CityboardMain = () => {
+const Cityboard = () => {
   const { isLoading, cityboardList } = useCityboard();
   const [selectedGroup, setSelectedGroup] = useState<
     CityBoardGroupType | 'all'
@@ -18,12 +19,6 @@ const CityboardMain = () => {
   const [selectedEmoji, setSelectedEmoji] = useState<
     CityBoardEmojiType | 'all'
   >('all');
-
-  const handleTextClick = (text: string) => {
-    window.navigator.clipboard.writeText(text).then(() => {
-      alert(`복사 완료💚\n원하는 곳에 바로 사용해보세요!`);
-    });
-  };
 
   const filterGroup = (item: CityBoardType) => {
     if (selectedGroup === 'all') return true;
@@ -38,7 +33,7 @@ const CityboardMain = () => {
   return (
     <div className='cityboard-main-root'>
       <Navbar />
-      {/* <SearchBar /> */}
+      <SearchBar cityboardList={cityboardList} />
       <main>
         <section className='filter-section'>
           <select
@@ -68,43 +63,9 @@ const CityboardMain = () => {
             {cityboardList
               ?.filter(filterGroup)
               .filter(filterEmojiType)
-              .map((item, idx) => {
-                if (item.type === 'face') {
-                  return (
-                    <li key={idx} className='face-item-section'>
-                      <div className='member-item'>{item.member}</div>
-                      <ul>
-                        {item.texts.map((text, idx) => (
-                          <li className='text-item' key={idx}>
-                            <div>{text}</div>
-                          </li>
-                        ))}
-                      </ul>
-                    </li>
-                  );
-                }
-
-                if (item.group === 'Zeni') {
-                  return (
-                    <Fragment key={idx}>
-                      {item.texts.map((text, idx) => (
-                        <li key={idx} className='text-item'>
-                          {text}
-                        </li>
-                      ))}
-                    </Fragment>
-                  );
-                }
-
-                return (
-                  <li
-                    className='text-item'
-                    key={idx}
-                    onClick={() => handleTextClick(item.text)}>
-                    {item.text}
-                  </li>
-                );
-              })}
+              .map((item, idx) => (
+                <CityboardItem item={item} key={idx} />
+              ))}
           </ul>
         </section>
       </main>
@@ -112,7 +73,7 @@ const CityboardMain = () => {
   );
 };
 
-export default CityboardMain;
+export default Cityboard;
 
 const groups: { label: string; id: 'all' | CityBoardGroupType }[] = [
   {

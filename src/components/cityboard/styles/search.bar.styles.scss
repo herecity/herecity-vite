@@ -1,0 +1,60 @@
+.cityboard-search-bar-root {
+  padding: 10px 20px;
+
+  .search-bar-container {
+    position: relative;
+
+    .input-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      border-radius: 4px;
+      background-color: $grey100;
+      border: 1px solid $grey200;
+
+      .input {
+        flex: 1;
+        background-color: transparent;
+        padding: 8px 16px;
+      }
+
+      .delete-btn {
+        font-size: 12px;
+        padding: 0px 16px;
+        color: $grey400;
+      }
+    }
+
+    .list-container {
+      position: absolute;
+      width: 100%;
+      height: 300px;
+      background-color: $white;
+      border: 1px solid $grey200;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 20px 10px;
+      border-radius: 4px;
+      overflow: scroll;
+      -webkit-box-shadow: 3px 10px 15px 2px $grey400;
+      box-shadow: 3px 10px 15px 2px $grey400;
+      transform: translateY(8px);
+
+      .item {
+        flex-shrink: 0;
+        width: 100%;
+        padding: 8px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        border-bottom: 1px solid $grey200;
+        background-color: $white;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+}
