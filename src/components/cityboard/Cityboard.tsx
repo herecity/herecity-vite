@@ -22,7 +22,7 @@ const Cityboard = () => {
 
   const filterGroup = (item: CityBoardType) => {
     if (selectedGroup === 'all') return true;
-    return item.group === selectedGroup;
+    return item.group.includes(selectedGroup);
   };
 
   const filterEmojiType = (item: CityBoardType) => {

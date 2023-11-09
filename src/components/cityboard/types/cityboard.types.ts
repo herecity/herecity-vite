@@ -1,29 +1,17 @@
-export type CityBoardGroupType = 'NCT' | '127' | 'DREAM' | 'WAYV' | ZeniType;
-export type ZeniType = 'Zeni';
+export type CityBoardGroupType = 'NCT' | '127' | 'DREAM' | 'WAYV' | 'Zeni';
 
 export type CityBoardEmojiType = 'lyrics' | 'etc' | CityboardFaceEmojiType;
 export type CityboardFaceEmojiType = 'face';
 
 export type CityBoardBasicType = {
-  group: Exclude<CityBoardGroupType, ZeniType>[];
+  group: CityBoardGroupType[];
   type: Exclude<CityBoardEmojiType, CityboardFaceEmojiType>;
-  text: string;
+  text: string[];
 };
 
-export type CityBoardFaceType = {
-  group: Exclude<CityBoardGroupType, ZeniType>;
+export type CityBoardFaceType = Pick<CityBoardBasicType, 'group' | 'text'> & {
   type: CityboardFaceEmojiType;
   member: string;
-  texts: string[];
 };
 
-export type CityboardZeniType = {
-  group: ZeniType;
-  type: Exclude<CityBoardEmojiType, CityboardFaceEmojiType>;
-  texts: string[];
-};
-
-export type CityBoardType =
-  | CityBoardBasicType
-  | CityBoardFaceType
-  | CityboardZeniType;
+export type CityBoardType = CityBoardBasicType | CityBoardFaceType;

@@ -17,7 +17,7 @@ const CityboardItem = memo(({ item }: Props) => {
       <li className='face-item-section'>
         <div className='member-item'>{item.member}</div>
         <ul>
-          {item.texts.map((text, idx) => (
+          {item.text.map((text, idx) => (
             <li
               onClick={() => {
                 handleTextClick(text);
@@ -32,27 +32,19 @@ const CityboardItem = memo(({ item }: Props) => {
     );
   }
 
-  if (item.group === 'Zeni') {
-    return (
-      <Fragment>
-        {item.texts.map((text, idx) => (
-          <li
-            onClick={() => {
-              handleTextClick(text);
-            }}
-            key={idx}
-            className='text-item'>
-            {text}
-          </li>
-        ))}
-      </Fragment>
-    );
-  }
-
   return (
-    <li className='text-item' onClick={() => handleTextClick(item.text)}>
-      {item.text}
-    </li>
+    <Fragment>
+      {item.text.map((text, idx) => (
+        <li
+          onClick={() => {
+            handleTextClick(text);
+          }}
+          key={idx}
+          className='text-item'>
+          {text}
+        </li>
+      ))}
+    </Fragment>
   );
 });
 

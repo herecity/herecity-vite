@@ -7,15 +7,10 @@ export function getOnlyTextFromCityboard(
   const tmpList: string[] = [];
   cityboardList.forEach((item) => {
     if (item.type === 'face') {
-      item.texts.forEach((text) => tmpList.push(text));
+      item.text.forEach((text) => tmpList.push(text));
       return;
     }
-    if (item.group === 'Zeni') {
-      item.texts.forEach((text) => tmpList.push(text));
-      return;
-    }
-
-    tmpList.push(item.text);
+    item.text.forEach((text) => tmpList.push(text));
   });
 
   return tmpList;
