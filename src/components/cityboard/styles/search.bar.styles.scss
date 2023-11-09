@@ -1,8 +1,12 @@
 .cityboard-search-bar-root {
+  display: flex;
+  justify-content: center;
   padding: 10px 20px;
 
   .search-bar-container {
+    width: 100%;
     position: relative;
+    max-width: $max-page-width;
 
     .input-container {
       display: flex;

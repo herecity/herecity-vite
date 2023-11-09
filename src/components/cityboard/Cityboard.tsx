@@ -36,26 +36,28 @@ const Cityboard = () => {
       <SearchBar cityboardList={cityboardList} />
       <main>
         <section className='filter-section'>
-          <select
-            onChange={(e) =>
-              setSelectedGroup(e.target.value as CityBoardGroupType | 'all')
-            }>
-            {groups.map((group) => (
-              <option value={group.id} key={group.id}>
-                {group.label}
-              </option>
-            ))}
-          </select>
-          <select
-            onChange={(e) =>
-              setSelectedEmoji(e.target.value as CityBoardEmojiType | 'all')
-            }>
-            {emojiTypes.map((group) => (
-              <option key={group.id} value={group.id}>
-                {group.label}
-              </option>
-            ))}
-          </select>
+          <div>
+            <select
+              onChange={(e) =>
+                setSelectedGroup(e.target.value as CityBoardGroupType | 'all')
+              }>
+              {groups.map((group) => (
+                <option value={group.id} key={group.id}>
+                  {group.label}
+                </option>
+              ))}
+            </select>
+            <select
+              onChange={(e) =>
+                setSelectedEmoji(e.target.value as CityBoardEmojiType | 'all')
+              }>
+              {emojiTypes.map((group) => (
+                <option key={group.id} value={group.id}>
+                  {group.label}
+                </option>
+              ))}
+            </select>
+          </div>
         </section>
         <section className='text-section'>
           <ul>
