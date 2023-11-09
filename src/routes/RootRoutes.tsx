@@ -1,5 +1,5 @@
 import NotFoundPage from '@pages/NotFoundPage';
-import CityBoard from '@pages/cityboard/CityBoard';
+import CityBoardPage from '@pages/cityboard/CityBoardPage';
 import HomePage from '@pages/home/HomePage';
 import Nbti from '@pages/nbti/Nbti';
 import Nchelin from '@pages/nchelin/Nchelin';
@@ -16,7 +16,8 @@ const RootRoutes = () => {
           <Route index element={<RecordPage />} />
           <Route path='result' element={<RecordResultPage />} />
         </Route>
-        <Route path='/city-board' element={<CityBoard />} />
+        <Route path='/city-board' element={<CityBoardPage />} />
+        <Route path='/nkeyboard' element={<CityBoardPage />} />
         <Route path='/nchelin' element={<Nchelin />} />
         <Route path='/nbti' element={<Nbti />} />
         <Route path='*' element={<NotFoundPage />} />

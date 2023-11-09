@@ -1,0 +1,68 @@
+.cityboard-main-root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  main {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .filter-section {
+    display: flex;
+    gap: 10px;
+    padding: 0 20px;
+
+    & > div {
+      width: 100%;
+      max-width: $max-page-width;
+      display: flex;
+      gap: 16px;
+    }
+
+    select {
+      background-color: $grey100;
+      border: 1px solid $grey200;
+      padding: 8px 16px 8px 0px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+  }
+
+  .text-section {
+    flex: 1;
+    padding: 20px;
+    background-color: $blue-lighten;
+    display: flex;
+    justify-content: center;
+
+    ul {
+      width: 100%;
+      max-width: $max-page-width;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .member-item {
+        margin: 10px 0 5px;
+      }
+
+      .text-item {
+        width: 100%;
+        padding: 16px;
+        overflow-x: scroll;
+        white-space: nowrap;
+        border: 2px solid $grey200;
+        background-color: $white;
+        border-radius: 6px;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+}

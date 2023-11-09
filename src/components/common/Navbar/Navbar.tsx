@@ -35,7 +35,7 @@ const Navbar = memo(() => {
         <ul className='tab-list-container'>
           {tabList.map((tab) => {
             return (
-              <Link to={`/${tab.tab}`}>
+              <Link key={tab.tab} to={`/${tab.tab}`}>
                 <li>{tab.name}</li>
               </Link>
             );
