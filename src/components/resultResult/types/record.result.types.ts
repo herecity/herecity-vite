@@ -11,3 +11,15 @@ export type SongType = {
   URL_dance?: string;
   tagCnt?: number;
 };
+
+export type DeviceType = 'ANDROID' | 'IPHONE' | 'WINDOWS' | 'MAC';
+export type OperatorType = ',' | ';' | '|';
+
+export type MusicPlatformOperatorType = {
+  [platform in MusicPlatfomTypes]: { [key in DeviceType]: ',' | ';' | '|' };
+};
+export type DeepLinkType = Record<
+  MusicPlatfomTypes,
+  Record<DeviceType, string>
+>;
+export type StoreLinkType = DeepLinkType;

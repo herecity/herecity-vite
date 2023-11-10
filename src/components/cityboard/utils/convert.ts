@@ -4,6 +4,7 @@ export function getOnlyTextFromCityboard(
   cityboardList: readonly CityBoardType[] | null,
 ) {
   if (!cityboardList) return null;
+
   const tmpList: string[] = [];
   cityboardList.forEach((item) => {
     if (item.type === 'face') {

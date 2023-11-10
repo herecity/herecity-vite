@@ -4,15 +4,14 @@ import { SongType } from './types/record.result.types';
 import { startTagSearch } from './utils/createPlaylist';
 import './styles/record.result.styles.scss';
 import { images } from '@assets/images';
-import {
-  bugsClickListener,
-  genieClickListener,
-  melonClickListener,
-} from './utils/createDepplink';
+
 import Loading from '@components/common/Loading/Loading';
 import Song from './components/Song';
+import { useDeeplink } from './hooks/useDeeplink';
+import { getDevice } from './utils/getDevice';
 
 const RecordResult = () => {
+  const { musicAppClickListener } = useDeeplink(getDevice());
   const [isLoading, setIsLoading] = useState(true);
   const [tags, setTags] = useState<Set<string>>(new Set());
   const [songs, setSongs] = useState<SongType[]>([]);
@@ -45,13 +44,13 @@ const RecordResult = () => {
           }개의 곡을 추천합니다`}
         </h2>
         <div className='share-container'>
-          <button onClick={() => bugsClickListener(songs)}>
+          <button onClick={() => musicAppClickListener(songs, 'bugs')}>
             <img src={images.bugs} alt='' />
           </button>
-          <button onClick={() => melonClickListener(songs)}>
+          <button onClick={() => musicAppClickListener(songs, 'melon')}>
             <img src={images.melon} alt='' />
           </button>
-          <button onClick={() => genieClickListener(songs)}>
+          <button onClick={() => musicAppClickListener(songs, 'genie')}>
             <img src={images.genie} alt='' />
           </button>
         </div>
