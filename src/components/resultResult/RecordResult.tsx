@@ -1,7 +1,6 @@
 import Navbar from '@components/common/Navbar/Navbar';
 import { useEffect, useState } from 'react';
-import { SongType } from './types/record.result.types';
-import { startTagSearch } from './utils/createPlaylist';
+import { SongType, TagType } from './types/record.result.types';
 import './styles/record.result.styles.scss';
 import { images } from '@assets/images';
 
@@ -9,17 +8,17 @@ import Loading from '@components/common/Loading/Loading';
 import Song from './components/Song';
 import { useDeeplink } from './hooks/useDeeplink';
 import { getDevice } from './utils/getDevice';
+import { usePlaylist } from './hooks/usePlaylist';
 
 const RecordResult = () => {
   const { musicAppClickListener } = useDeeplink(getDevice());
-  const [isLoading, setIsLoading] = useState(true);
   const [tags, setTags] = useState<Set<string>>(new Set());
   const [songs, setSongs] = useState<SongType[]>([]);
+  const { getSongList, isLoading } = usePlaylist();
 
   const loadSongs = async (tags: string[]) => {
-    const songs = await startTagSearch(tags);
+    const songs = await getSongList(tags as TagType[]);
     setSongs(songs);
-    setIsLoading(false);
   };
 
   const loadTags = () => {

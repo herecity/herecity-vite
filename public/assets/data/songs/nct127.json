@@ -1,11 +1,12 @@
 {
-  "NCT 127": [
+  "songList": [
     {
       "title": "Faster",
       "artist": "NCT 127",
       "album": "질주 (2 Baddies) - The 4th Album",
       "image": "https://image.bugsm.co.kr/album/images/200/204931/20493129.jpg?version=20221014002823.0",
       "uid": { "bugs": "32646086", "melon": "35640847", "genie": "98302345" },
+      "test": ["a", "b", "c"],
       "tags": [
         "운동할때",
         "월요병퇴치",
