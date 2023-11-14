@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { SongType } from '../types/record.result.types';
 
 type Props = {
@@ -5,7 +6,7 @@ type Props = {
   tags: Set<string>;
 };
 
-const Song = ({ song, tags }: Props) => {
+const Song = memo(({ song, tags }: Props) => {
   return (
     <li className='song-container'>
       <div className='item thumbnail'>
@@ -19,19 +20,21 @@ const Song = ({ song, tags }: Props) => {
       <div className='item title'>{song.title}</div>
       <div className='item artist'>{song.artist}</div>
       <div className='item tags'>
-        {song.tags
+        {[...song.tags, song.artist]
           .filter((tag) => tags.has(tag))
-          .map((_) => (
-            <div className='bar' />
+          .map((_, idx) => (
+            <div className='bar' key={idx} />
           ))}
-        {Array(3 - song.tags.filter((tag) => tags.has(tag)).length)
+        {Array(
+          3 - [...song.tags, song.artist].filter((tag) => tags.has(tag)).length,
+        )
           .fill(0)
-          .map((_) => (
-            <div className='bar not' />
+          .map((_, idx) => (
+            <div className='bar not' key={idx} />
           ))}
       </div>
     </li>
   );
-};
+});
 
 export default Song;
