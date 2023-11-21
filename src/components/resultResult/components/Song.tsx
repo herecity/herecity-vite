@@ -46,10 +46,14 @@ const Song = memo(({ song, tags }: Props) => {
       {hasAdditionalInfo() && (
         <div className='additional-info-container'>
           {song.URL_mv && (
-            <button className='button-primary'>{'뮤직비디오'}</button>
+            <a target='_blank' href={song.URL_mv} className='button-primary'>
+              {'뮤직비디오'}
+            </a>
           )}
           {song.URL_dance && (
-            <button className='button-primary'>{'댄스비디오'}</button>
+            <a target='_blank' href={song.URL_dance} className='button-primary'>
+              {'댄스비디오'}
+            </a>
           )}
         </div>
       )}
