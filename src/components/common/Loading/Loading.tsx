@@ -1,7 +1,7 @@
 import './styles/loading.styles.scss';
 
 type Props = {
-  color?: 'green' | 'blud' | 'pink' | 'yellow';
+  color?: 'green' | 'blue' | 'pink' | 'yellow';
 };
 
 const Loading = ({ color = 'green' }: Props) => {

@@ -11,7 +11,7 @@
   }
 
   &.city-board {
-    @include background-gradient($blue-lighten);
+    @include background-gradient($blue);
   }
 
   &.nchelin {
@@ -36,31 +36,39 @@
     max-width: $max-page-width;
 
     .slide-container {
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 20px;
 
-      a {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+      .tab-name {
+        font-size: 46px;
+        font-weight: 700;
+      }
 
-        .tab-name {
-          font-size: 46px;
-          font-weight: 700;
-        }
+      p {
+        font-size: 27px;
+        font-weight: 300;
+        text-align: center;
+        white-space: pre-wrap;
+      }
 
-        p {
-          font-size: 27px;
-          font-weight: 300;
-          text-align: center;
-          white-space: pre-wrap;
-        }
+      .button-primary {
+        width: 200px;
 
-        .button-primary {
-          width: 200px;
+        &:hover {
+          &.city-board {
+            background-color: $blue-lighten;
+          }
+
+          &.nchelin {
+            background-color: $pink-lighten;
+          }
+
+          &.nbti {
+            background-color: $yellow-lighten;
+          }
         }
       }
     }

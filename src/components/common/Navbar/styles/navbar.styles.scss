@@ -30,7 +30,8 @@
       font-size: 18px;
       font-weight: 500;
       transition: color 300ms ease-in-out;
-      color: $black;
+      color: $white;
+      text-shadow: $gray500 0px 0 2px;
 
       &:hover {
         color: $black;

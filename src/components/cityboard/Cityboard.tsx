@@ -33,8 +33,8 @@ const Cityboard = () => {
   return (
     <div className='cityboard-main-root'>
       <Navbar />
-      <SearchBar cityboardList={cityboardList} />
       <main>
+        <SearchBar cityboardList={cityboardList} />
         <section className='filter-section'>
           <div>
             <select
@@ -61,7 +61,7 @@ const Cityboard = () => {
         </section>
         <section className='text-section'>
           <ul>
-            {isLoading && <Loading />}
+            {isLoading && <Loading color='blue' />}
             {cityboardList
               ?.filter(filterGroup)
               .filter(filterEmojiType)
