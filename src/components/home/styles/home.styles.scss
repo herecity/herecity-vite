@@ -3,26 +3,26 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  transition: background-color 300ms ease-in;
+  transition: background 300ms ease-in;
 
   &.record {
-    background-color: $green;
+    // background-color: $green;
+    @include background-gradient($green);
   }
 
   &.city-board {
-    background-color: $blue-lighten;
+    @include background-gradient($blue-lighten);
   }
 
   &.nchelin {
-    background-color: $pink;
+    @include background-gradient($pink);
   }
 
   &.nbti {
-    background-color: $yellow;
+    @include background-gradient($yellow);
   }
 
-  & > nav,
-  main {
+  & > main {
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -41,6 +41,7 @@
       align-items: center;
 
       a {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -52,10 +53,14 @@
         }
 
         p {
-          font-size: 30px;
+          font-size: 27px;
           font-weight: 300;
           text-align: center;
           white-space: pre-wrap;
+        }
+
+        .button-primary {
+          width: 200px;
         }
       }
     }

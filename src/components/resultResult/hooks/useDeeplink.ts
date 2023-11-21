@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import {
   DeepLinkType,
   DeviceType,
@@ -8,9 +9,12 @@ import {
 } from '../types/record.result.types';
 
 export function useDeeplink(device: DeviceType) {
-  const musicAppClickListener = (songs: SongType[], app: MusicPlatfomTypes) => {
-    redirectApp(app, connectUid(app, songs));
-  };
+  const musicAppClickListener = useCallback(
+    (songs: SongType[], app: MusicPlatfomTypes) => {
+      redirectApp(app, connectUid(app, songs));
+    },
+    [],
+  );
 
   const connectUid = (musicPlatform: MusicPlatfomTypes, songs: SongType[]) => {
     return songs

@@ -26,6 +26,7 @@ const Home = () => {
                   <Link to={tab.tab}>
                     <div className='tab-name'>{tab.name}</div>
                     <p>{tab.description}</p>
+                    <button className='button-primary '>{'바로가기'}</button>
                   </Link>
                 </div>
               </SwiperSlide>

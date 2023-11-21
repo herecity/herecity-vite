@@ -46,13 +46,6 @@ export function usePlaylist() {
   let allTaggedSongs: SongType[] = []; // 태그 교집합 노래들
   const [isLoading, setIsLoading] = useState(true);
 
-  const resetItems = () => {
-    originalTag = [];
-    remainTags = [];
-    songs = [];
-    allTaggedSongs = [];
-  };
-
   const fetchSongs = async (artist: ArtistType): Promise<SongType[]> => {
     return await fetch(SongFile[artist])
       .then((res) => res.json())
@@ -194,7 +187,6 @@ export function usePlaylist() {
   };
 
   const getSongList = async (tagList: TagType[]) => {
-    resetItems();
     loadTags(tagList);
     await handleTags();
     updateTagCount();

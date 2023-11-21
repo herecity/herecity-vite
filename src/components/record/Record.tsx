@@ -32,7 +32,7 @@ const Record = () => {
                 {section.items.map((item) => {
                   return (
                     <div
-                      className={`${
+                      className={`button-primary ${
                         activeKeywords.size === 3 ? 'disabled' : ''
                       } ${activeKeywords.has(item) ? 'active' : ''} keyword`}
                       aria-disabled={activeKeywords.size === 3 ? true : false}
@@ -50,7 +50,9 @@ const Record = () => {
       <div className='create-btn-container'>
         <button
           onClick={handleCreateBtnClick}
-          className={`${activeKeywords.size > 0 ? 'active' : ''}`}>
+          className={`button-primary ${
+            activeKeywords.size > 0 ? 'active' : ''
+          }`}>
           {'🎵 플리 만들기'}
         </button>
       </div>

@@ -1,0 +1,54 @@
+.song-root {
+  display: flex;
+  flex-direction: column;
+  border-radius: $border-radius;
+  background-color: $white;
+  padding: 12px;
+
+  .default-info-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .thumbnail {
+      width: 50px;
+      height: 50px;
+      border-radius: $border-radius;
+    }
+
+    .title {
+      width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .artist {
+      width: 120px;
+      @include ellipsis;
+    }
+
+    .tags {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .bar {
+        flex: 1;
+        height: 10px;
+        background-color: $green-darken;
+        border-radius: $border-radius;
+
+        &.not {
+          background-color: $green-lighten;
+        }
+      }
+    }
+  }
+
+  .additional-info-container {
+    display: flex;
+    gap: 20px;
+  }
+}
