@@ -1,8 +1,10 @@
 .song-root {
   display: flex;
   flex-direction: column;
-  padding: 12px 20px;
-  // background-color: $white;
+  gap: 8px;
+  padding: 12px 0;
+  margin: 0 20px;
+  border-bottom: 1px solid $green-darken;
 
   .info-container {
     display: flex;
@@ -15,15 +17,23 @@
       border-radius: $border-radius;
     }
 
+    .default {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
     .title {
       width: 200px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      font-size: 14px;
+      @include ellipsis;
+      font-weight: 500;
     }
 
     .artist {
       width: 120px;
+      font-size: 12px;
+      color: $gray500;
       @include ellipsis;
     }
 
@@ -36,11 +46,11 @@
       .bar {
         flex: 1;
         height: 10px;
-        background-color: $green-darken;
+        background-color: $secondary;
         border-radius: $border-radius;
 
         &.not {
-          background-color: $green-lighten;
+          background-color: $secondary-lighten;
         }
       }
     }
@@ -48,36 +58,12 @@
 
   .additional-info-container {
     display: flex;
-    gap: 20px;
+    gap: 8px;
+
+    .button-primary {
+      flex: 1;
+      height: fit-content;
+      font-size: 13px;
+    }
   }
 }
-
-// @media (max-width: 600px) {
-//   .song-root {
-//     display: flex;
-//     align-items: center;
-//     gap: 16px;
-
-//     .thumbnail {
-//       width: 50px;
-//       height: 50px;
-//       border-radius: $border-radius;
-//     }
-
-//     .title {
-//       width: 200px;
-//       overflow: hidden;
-//       text-overflow: ellipsis;
-//       font-size: 14px;
-//     }
-
-//     .artist {
-//       width: 120px;
-//       font-size: 14px;
-//     }
-
-//     .tags {
-//       flex: 1;
-//     }
-//   }
-// }

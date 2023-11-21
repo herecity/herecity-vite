@@ -48,7 +48,8 @@
   }
 
   .playlist-section {
-    min-height: calc(100vh - 400px);
+    width: 100%;
+    height: fit-content;
     transform: translateY(400px);
     display: flex;
     justify-content: center;
@@ -62,7 +63,7 @@
 
     ul {
       width: 100%;
-      height: fit-content;
+      min-height: calc(100vh - 400px);
       display: flex;
       flex-direction: column;
       max-width: 600px;

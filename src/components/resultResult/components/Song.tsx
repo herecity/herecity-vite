@@ -8,6 +8,10 @@ type Props = {
 };
 
 const Song = memo(({ song, tags }: Props) => {
+  const hasAdditionalInfo = () => {
+    return song.URL_dance || song.URL_mv;
+  };
+
   return (
     <li className='song-root'>
       <div className='info-container'>
@@ -39,10 +43,16 @@ const Song = memo(({ song, tags }: Props) => {
             ))}
         </div>
       </div>
-      <div className='addtional-info-container'>
-        {song.URL_mv && <button>{'뮤직비디오'}</button>}
-        {song.URL_dance && <button>{'댄스비디오'}</button>}
-      </div>
+      {hasAdditionalInfo() && (
+        <div className='additional-info-container'>
+          {song.URL_mv && (
+            <button className='button-primary'>{'뮤직비디오'}</button>
+          )}
+          {song.URL_dance && (
+            <button className='button-primary'>{'댄스비디오'}</button>
+          )}
+        </div>
+      )}
     </li>
   );
 });

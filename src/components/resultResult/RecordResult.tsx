@@ -80,16 +80,18 @@ const RecordResult = () => {
       <section
         style={{ transform: `translateY(${200 + 70 * tags.size}px)` }}
         className='playlist-section'>
-        {isLoading ? (
-          <Loading />
-        ) : (
-          <ul>
-            <div className='song-cnt'>{`${songs.length}개의 곡`}</div>
-            {songs.map((song, idx) => {
-              return <Song song={song} tags={tags} key={idx} />;
-            })}
-          </ul>
-        )}{' '}
+        <ul>
+          {isLoading ? (
+            <Loading />
+          ) : (
+            <>
+              <div className='song-cnt'>{`${songs.length}개의 곡`}</div>
+              {songs.map((song, idx) => {
+                return <Song song={song} tags={tags} key={idx} />;
+              })}
+            </>
+          )}
+        </ul>
       </section>
     </div>
   );

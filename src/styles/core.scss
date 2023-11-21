@@ -30,6 +30,10 @@ button {
   border: 1px solid $gray300;
   border-radius: 6px;
   font-size: 16px;
+
+  &:hover {
+    background-color: $green-lighten;
+  }
 }
 
 ul,
