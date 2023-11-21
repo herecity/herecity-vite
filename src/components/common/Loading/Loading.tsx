@@ -1,9 +1,13 @@
 import './styles/loading.styles.scss';
 
-const Loading = () => {
+type Props = {
+  color?: 'green' | 'blud' | 'pink' | 'yellow';
+};
+
+const Loading = ({ color = 'green' }: Props) => {
   return (
     <div className='loading-root'>
-      <div className='spinner' />
+      <div className={`spinner ${color}`} />
     </div>
   );
 };

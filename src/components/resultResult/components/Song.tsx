@@ -10,7 +10,7 @@ type Props = {
 const Song = memo(({ song, tags }: Props) => {
   return (
     <li className='song-root'>
-      <div className='default-info-container'>
+      <div className='info-container'>
         <div className='item thumbnail'>
           <img
             loading='lazy'
@@ -19,8 +19,10 @@ const Song = memo(({ song, tags }: Props) => {
             alt='앨범 썸네일 이미지'
           />
         </div>
-        <div className='item title'>{song.title}</div>
-        <div className='item artist'>{song.artist}</div>
+        <div className='default'>
+          <div className='item title'>{song.title}</div>
+          <div className='item artist'>{song.artist}</div>
+        </div>
         <div className='item tags'>
           {[...song.tags, song.artist]
             .filter((tag) => tags.has(tag))

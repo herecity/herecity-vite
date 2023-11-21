@@ -16,7 +16,8 @@
   .logo {
     font-size: 28px;
     font-weight: 700;
-    color: $black;
+    color: $white;
+    text-shadow: $gray500 0px 0 2px;
   }
 
   .tab-list-container {

@@ -1,51 +1,72 @@
 .record-result-root {
+  position: relative;
   display: flex;
   flex-direction: column;
-  background-color: $white;
+  @include background-gradient($green);
 
   .main {
+    position: fixed;
     width: 100%;
     flex: 1;
     display: flex;
     flex-direction: column;
+    z-index: 0;
 
-    .header {
-      word-break: keep-all;
-      white-space: pre-wrap;
-      text-align: center;
-      padding: 100px 20px;
+    .keywords-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 30px 20px;
       font-size: 30px;
       font-weight: 700;
-      color: $green-darken;
+      color: $black;
+
+      .tag {
+        font-size: 40px;
+        background: linear-gradient(to right top, #708f56, #437329, #39412b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .song-cnt {
+        text-align: center;
+      }
     }
 
     .share-container {
       display: flex;
       justify-content: center;
       gap: 20px;
-      background-color: $gray100;
       padding: 12px 20px;
+      transition: transform 300ms ease-in-out;
 
       button > img {
         width: 40px;
         height: 40px;
       }
     }
+  }
 
-    .playlist-section {
-      flex: 1;
+  .playlist-section {
+    min-height: calc(100vh - 400px);
+    transform: translateY(400px);
+    display: flex;
+    justify-content: center;
+    background-color: $white;
+    padding: 30px 0;
+    border-radius: 16px 16px 0 0;
+
+    .song-cnt {
+      padding: 0 20px;
+    }
+
+    ul {
+      width: 100%;
+      height: fit-content;
       display: flex;
-      justify-content: center;
-      background-color: $green;
-      padding: 30px 20px;
-
-      ul {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        max-width: 600px;
-      }
+      flex-direction: column;
+      max-width: 600px;
+      background-color: $white;
     }
   }
 
@@ -65,51 +86,50 @@
   }
 }
 
-@media (max-width: 600px) {
-  .record-result-root {
-    .main {
-      .header {
-        padding: 80px 20px;
-        font-size: 24px;
-      }
+// @media (max-width: 600px) {
+//   .record-result-root {
+//     .main {
+//       .header {
+//         padding: 80px 20px;
+//         font-size: 24px;
+//       }
 
-      .playlist-section {
-        padding: 40px 20px;
+//       .playlist-section {
+//         padding: 40px 0px;
 
-        ul {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
+//         ul {
+//           display: flex;
+//           flex-direction: column;
 
-          .song-container {
-            display: flex;
-            align-items: center;
-            gap: 16px;
+//           .song-container {
+//             display: flex;
+//             align-items: center;
+//             gap: 16px;
 
-            .thumbnail {
-              width: 50px;
-              height: 50px;
-              border-radius: $border-radius;
-            }
+//             .thumbnail {
+//               width: 50px;
+//               height: 50px;
+//               border-radius: $border-radius;
+//             }
 
-            .title {
-              width: 200px;
-              overflow: hidden;
-              text-overflow: ellipsis;
-              font-size: 14px;
-            }
+//             .title {
+//               width: 200px;
+//               overflow: hidden;
+//               text-overflow: ellipsis;
+//               font-size: 14px;
+//             }
 
-            .artist {
-              width: 120px;
-              font-size: 14px;
-            }
+//             .artist {
+//               width: 120px;
+//               font-size: 14px;
+//             }
 
-            .tags {
-              flex: 1;
-            }
-          }
-        }
-      }
-    }
-  }
-}
+//             .tags {
+//               flex: 1;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
