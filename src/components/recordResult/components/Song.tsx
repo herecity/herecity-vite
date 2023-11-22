@@ -1,10 +1,10 @@
 import { memo } from 'react';
-import { SongType } from '../types/record.result.types';
+import { ArtistType, SongType, TagType } from '../types/record.result.types';
 import '../styles/song.styles.scss';
 
 type Props = {
   song: SongType;
-  tags: Set<string>;
+  tags: Set<TagType>;
 };
 
 const Song = memo(({ song, tags }: Props) => {

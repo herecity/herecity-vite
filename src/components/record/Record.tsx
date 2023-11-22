@@ -6,10 +6,10 @@ import { TagType } from '@components/recordResult/types/record.result.types';
 
 const Record = () => {
   const navigate = useNavigate();
-  const [activeKeywords, setActiveKeywords] = useState(new Set());
+  const [activeTags, setActiveTags] = useState(new Set());
 
   const handleKeywordClick = (keyword: string) => {
-    setActiveKeywords((prev) => {
+    setActiveTags((prev) => {
       const clone = new Set(prev);
       if (clone.has(keyword)) {
         clone.delete(keyword);
@@ -24,26 +24,26 @@ const Record = () => {
   };
 
   const handleCreateBtnClick = () => {
-    navigate(`result?tags=${Array.from(activeKeywords).join(',')}`);
+    navigate(`result?tags=${Array.from(activeTags).join(',')}`);
   };
 
   return (
     <div className='record-root'>
       <Navbar />
       <main>
-        {musicKeywords.map((section) => {
+        {musicTags.map((section) => {
           return (
             <div className='section-container' key={section.name}>
               <div className='title'>{section.name}</div>
-              <ul className='keywords-container'>
+              <ul className='tags-container'>
                 {section.items.map((item) => {
                   return (
                     <li
                       id={item}
                       className={`button-primary ${
-                        activeKeywords.size === 3 ? 'disabled' : ''
-                      } ${activeKeywords.has(item) ? 'active' : ''} keyword`}
-                      aria-disabled={activeKeywords.size === 3 ? true : false}
+                        activeTags.size === 3 ? 'disabled' : ''
+                      } ${activeTags.has(item) ? 'active' : ''} tag`}
+                      aria-disabled={activeTags.size === 3 ? true : false}
                       onClick={() => handleKeywordClick(item)}
                       key={item}>
                       {item}
@@ -58,9 +58,7 @@ const Record = () => {
       <div className='create-btn-container'>
         <button
           onClick={handleCreateBtnClick}
-          className={`button-primary ${
-            activeKeywords.size > 0 ? 'active' : ''
-          }`}>
+          className={`button-primary ${activeTags.size > 0 ? 'active' : ''}`}>
           {'🎵 플리 만들기'}
         </button>
       </div>
@@ -70,7 +68,7 @@ const Record = () => {
 
 export default Record;
 
-export const musicKeywords: { name: string; items: TagType[] }[] = [
+export const musicTags: { name: string; items: TagType[] }[] = [
   {
     name: '계절/날씨/상황',
     items: [

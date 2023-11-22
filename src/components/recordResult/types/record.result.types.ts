@@ -2,7 +2,7 @@ export type MusicPlatfomTypes = 'bugs' | 'genie' | 'melon';
 
 export type SongType = {
   title: string;
-  artist: string;
+  artist: string & ArtistType;
   album: string;
   image: string;
   uid: Record<MusicPlatfomTypes, string>;
