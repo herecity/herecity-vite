@@ -10,5 +10,4 @@ export default {
     '^@tests(.*)$': '<rootDir>/src/tests$1',
     '^@utils(.*)$': '<rootDir>/src/utils$1',
   },
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 };
