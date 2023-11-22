@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   ArtistType,
   ConcertSongListType,
@@ -6,15 +5,6 @@ import {
   SongType,
   TagType,
 } from '../types/record.result.types';
-
-const SongFile: { [group in ArtistType]: string } = {
-  'NCT 127': '/assets/data/songs/nct127.json',
-  'NCT U': '/assets/data/songs/nctU.json',
-  'NCT DREAM': '/assets/data/songs/nctDream.json',
-  WayV: '/assets/data/songs/wayV.json',
-  SOLO: '/assets/data/songs/solo.json',
-  방구석콘서트: '/assets/data/songs/concert.json',
-};
 
 //방구석콘서트 태그는 그룹태그랑만 선택 가능
 
@@ -36,15 +26,14 @@ const SongFile: { [group in ArtistType]: string } = {
  *
  * 키워드에 맞는 플레이리스트 목록을 생성합니다
  *
- * @returns  isLoading , getSongList
+ * @returns  getSongList
  */
 
 export function usePlaylist() {
-  let originalTag: TagType[] = [];
-  let remainTags: TagType[] = [];
+  let originalTag: Set<TagType>;
+  let remainTags: Set<TagType>;
   let songs: SongType[] = []; // 태그 합집합 노래들
   let allTaggedSongs: SongType[] = []; // 태그 교집합 노래들
-  const [isLoading, setIsLoading] = useState(true);
 
   const fetchSongs = async (artist: ArtistType): Promise<SongType[]> => {
     return await fetch(SongFile[artist])
@@ -57,19 +46,16 @@ export function usePlaylist() {
   };
 
   const loadTags = (tagList: TagType[]) => {
-    originalTag = [...tagList];
-    remainTags = [...tagList];
+    originalTag = new Set(tagList);
+    remainTags = new Set(tagList);
   };
 
   const removeTagItem = (item: TagType) => {
-    const index = remainTags.indexOf(item);
-    if (index !== -1) {
-      remainTags.splice(index, 1);
-    }
+    remainTags.delete(item);
   };
 
   const isConcertInTag = () => {
-    return remainTags.includes('방구석콘서트');
+    return remainTags.has('방구석콘서트');
   };
 
   const handleConcertTag = async () => {
@@ -97,11 +83,11 @@ export function usePlaylist() {
   };
 
   const isGroupInTag = () => {
-    return remainTags.some((tag) => isGroupType(tag));
+    return Array.from(remainTags.keys()).some(isGroupType);
   };
 
   const whichGroups = () => {
-    return remainTags.filter((tag) => isGroupType(tag)) as GroupType[];
+    return Array.from(remainTags.keys()).filter(isGroupType);
   };
 
   const handleGroupTag = async () => {
@@ -153,18 +139,16 @@ export function usePlaylist() {
     if (songs.length === 0) {
       await fetchAllData();
     }
-    if (remainTags.length === 0) {
+    if (remainTags.size === 0) {
       allTaggedSongs = songs;
       return;
     }
     handleOtherTags();
   };
 
-  const updateTagCount = () => {
+  const updateTagCountPerSong = () => {
     songs.forEach((song) => {
-      song.tagCnt = song['tags'].filter((tag) =>
-        originalTag.includes(tag),
-      ).length;
+      song.tagCnt = song['tags'].filter((tag) => originalTag.has(tag)).length;
     });
   };
 
@@ -189,14 +173,22 @@ export function usePlaylist() {
   const getSongList = async (tagList: TagType[]) => {
     loadTags(tagList);
     await handleTags();
-    updateTagCount();
+    updateTagCountPerSong();
     sortByTagAndRelease();
-    setIsLoading(false);
+
     return songs;
   };
 
   return {
     getSongList,
-    isLoading,
   };
 }
+
+export const SongFile: { [group in ArtistType]: string } = {
+  'NCT 127': '/assets/data/songs/nct127.json',
+  'NCT U': '/assets/data/songs/nctU.json',
+  'NCT DREAM': '/assets/data/songs/nctDream.json',
+  WayV: '/assets/data/songs/wayV.json',
+  SOLO: '/assets/data/songs/solo.json',
+  방구석콘서트: '/assets/data/songs/concert.json',
+};

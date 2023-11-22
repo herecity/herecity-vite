@@ -11,15 +11,17 @@ import { usePlaylist } from './hooks/usePlaylist';
 
 const RecordResult = () => {
   const { musicAppClickListener } = useDeeplink(getDevice());
+  const { getSongList } = usePlaylist();
+  const [isLoading, setIsLoading] = useState(true);
   const [tags, setTags] = useState<Set<string>>(new Set());
   const [songs, setSongs] = useState<SongType[]>([]);
-  const { getSongList, isLoading } = usePlaylist();
   const keywordsRef = useRef<HTMLDivElement>(null);
   const [scrollY, setScrollY] = useState(0);
 
   const loadSongs = async (tags: string[]) => {
     const songs = await getSongList(tags as TagType[]);
     setSongs(songs);
+    setIsLoading(false);
   };
 
   const loadTags = () => {
@@ -31,12 +33,10 @@ const RecordResult = () => {
   };
 
   const getTagStyle = (idx: number) => {
-    if (scrollY > 400) return `translateX(${(400 * (idx + 1)).toFixed(0)}px)`;
     return `translateX(${(scrollY * (idx + 1)).toFixed(0)}px)`;
   };
 
   const getShareContainerStyle = () => {
-    if (scrollY > 400) return `translateX(40px).toFixed(0)}px)`;
     return `translateY(${scrollY / 10}px)`;
   };
 
@@ -46,6 +46,7 @@ const RecordResult = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
+      if (window.screenY > 400) return;
       setScrollY(window.scrollY);
     });
   }, []);

@@ -11,7 +11,14 @@ const Record = () => {
   const handleKeywordClick = (keyword: string) => {
     setActiveKeywords((prev) => {
       const clone = new Set(prev);
-      clone.has(keyword) ? clone.delete(keyword) : clone.add(keyword);
+      if (clone.has(keyword)) {
+        clone.delete(keyword);
+        return clone;
+      }
+
+      if (clone.size === 3) return clone;
+
+      clone.add(keyword);
       return clone;
     });
   };
@@ -26,12 +33,13 @@ const Record = () => {
       <main>
         {musicKeywords.map((section) => {
           return (
-            <div className='section-container'>
+            <div className='section-container' key={section.name}>
               <div className='title'>{section.name}</div>
-              <div className='keywords-container'>
+              <ul className='keywords-container'>
                 {section.items.map((item) => {
                   return (
-                    <div
+                    <li
+                      id={item}
                       className={`button-primary ${
                         activeKeywords.size === 3 ? 'disabled' : ''
                       } ${activeKeywords.has(item) ? 'active' : ''} keyword`}
@@ -39,10 +47,10 @@ const Record = () => {
                       onClick={() => handleKeywordClick(item)}
                       key={item}>
                       {item}
-                    </div>
+                    </li>
                   );
                 })}
-              </div>
+              </ul>
             </div>
           );
         })}
