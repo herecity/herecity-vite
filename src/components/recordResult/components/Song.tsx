@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { ArtistType, SongType, TagType } from '../types/record.result.types';
+import { SongType, TagType } from '../types/record.result.types';
 import '../styles/song.styles.scss';
 
 type Props = {
