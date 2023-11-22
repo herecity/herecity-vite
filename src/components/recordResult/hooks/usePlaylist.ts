@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import {
   ArtistType,
   ConcertSongListType,
@@ -6,34 +7,35 @@ import {
   TagType,
 } from '../types/record.result.types';
 
-//방구석콘서트 태그는 그룹태그랑만 선택 가능
-
 /**
+ *
+ * 키워드에 맞는 플레이리스트 목록을 생성합니다
+ *
  * 태그에 따른 플레이리스트 구성
  *
  * 1) 방구석콘서트 태그 있을 경우,
  *    - 콘서트 라이브 곡들만 포함됩니다.
  *    - 그룹 태그가 있을 경우, 콘서트 곡들 중에서 그룹 태그 교집합 곡들이 포함됩니다.
+ *    - 나머지 태그는 무시됩니다
  * 2) 그룹 태그 있을 경우,
  *    - 해당 그룹 곡들과 나머지 태그의 교집합 곡들이 포합됩니다.
- * 3) 위 태그들 없으면, 모든 곡들 중 선택된 태그가 포함된 곡들이 포함됩니다.
- * 4) 타이틀 태그 있으면, 패치된 노래들 중 우선 분류
+ * 3) 위 태그들 없으면, 모든 곡들 중 선택된 태그가 하나라도 포함된 곡들이 포함됩니다.
  *
  * => 합집합 태그 노래 (songs), 교집합 태그 노래 (allTaggedSongs)
- */
-
-/**
  *
- * 키워드에 맞는 플레이리스트 목록을 생성합니다
+ *
  *
  * @returns  getSongList
  */
 
-export function usePlaylist() {
+export function usePlaylist(tagList: Set<TagType>) {
   let originalTag: Set<TagType>;
   let remainTags: Set<TagType>;
   let songs: SongType[] = []; // 태그 합집합 노래들
   let allTaggedSongs: SongType[] = []; // 태그 교집합 노래들
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [playlist, setPlaylist] = useState<SongType[]>([]);
 
   const fetchSongs = async (artist: ArtistType): Promise<SongType[]> => {
     return await fetch(SongFile[artist])
@@ -45,9 +47,9 @@ export function usePlaylist() {
     return await fetch(SongFile['방구석콘서트']).then((res) => res.json());
   };
 
-  const loadTags = (tagList: TagType[]) => {
-    originalTag = new Set(tagList);
-    remainTags = new Set(tagList);
+  const loadTags = (tagList: Set<TagType>) => {
+    originalTag = new Set(tagList.keys());
+    remainTags = new Set(tagList.keys());
   };
 
   const removeTagItem = (item: TagType) => {
@@ -170,17 +172,24 @@ export function usePlaylist() {
     allTaggedSongs.sort(sortFunction);
   };
 
-  const getSongList = async (tagList: TagType[]) => {
+  const getSongList = async (tagList: Set<TagType>) => {
     loadTags(tagList);
     await handleTags();
     updateTagCountPerSong();
     sortByTagAndRelease();
-
-    return songs;
+    setIsLoading(false);
+    setPlaylist(songs);
   };
 
+  useEffect(() => {
+    if (tagList.size === 0) return;
+
+    getSongList(tagList);
+  }, [tagList]);
+
   return {
-    getSongList,
+    playlist,
+    isLoading,
   };
 }
 
