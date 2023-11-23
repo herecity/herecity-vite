@@ -9,6 +9,7 @@ export type SongType = {
   tags: TagType[];
   URL_mv?: string;
   URL_dance?: string;
+  URL_tv?: string;
   tagCnt?: number;
 };
 

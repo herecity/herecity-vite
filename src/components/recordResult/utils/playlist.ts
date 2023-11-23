@@ -21,11 +21,12 @@ export class Playlist {
   private remainTags: Set<TagType> = new Set();
   songs: SongType[] = []; // 태그 합집합 노래들
   allTaggedSongs: SongType[] = []; // 태그 교집합 노래들
-  playlistClient = new PlaylistClient();
+  playlistClient: PlaylistClient;
 
-  constructor(tagList: Set<TagType>) {
+  constructor(tagList: Set<TagType>, playlistClient: PlaylistClient) {
     this.originalTag = new Set(tagList.keys());
     this.remainTags = new Set(tagList.keys());
+    this.playlistClient = playlistClient;
   }
 
   private removeTagItem = (item: TagType) => {

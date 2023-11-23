@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { SongType, TagType } from '../types/record.result.types';
 import { Playlist } from '../utils/playlist';
+import { PlaylistClient } from '../api/playlistClient';
 
 /**
  *
@@ -14,7 +15,7 @@ export function usePlaylist(tagList: Set<TagType>) {
   const [playlist, setPlaylist] = useState<SongType[]>([]);
 
   const getSongList = async () => {
-    const playlist = new Playlist(tagList);
+    const playlist = new Playlist(tagList, new PlaylistClient());
     setPlaylist(await playlist.create());
     setIsLoading(false);
   };

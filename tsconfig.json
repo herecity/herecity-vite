@@ -29,7 +29,9 @@
       "@assets/*": ["assets/*"],
       "@tests/*": ["tests/*"],
       "@utils/*": ["utils/*"],
-      "@pages/*": ["pages/*"]
+      "@pages/*": ["pages/*"],
+      "@mocks/*": ["mocks/*"],
+      "@api/*": ["api/*"]
     }
   },
   "include": ["src"],

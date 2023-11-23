@@ -14,11 +14,15 @@ export default {
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
   },
+
   moduleNameMapper: {
     '^.+\\.svg$': 'jest-svg-transformer',
     '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
     '^@components(.*)$': '<rootDir>/src/components$1',
     '^@tests(.*)$': '<rootDir>/src/tests$1',
     '^@utils(.*)$': '<rootDir>/src/utils$1',
+    '^@mocks(.*)$': '<rootDir>/src/mocks$1',
+    '^@api(.*)$': '<rootDir>/src/api$1',
   },
+  // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 };

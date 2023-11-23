@@ -1,21 +1,18 @@
-import { client } from '@api/api';
+import { PlaylistClient } from '@components/recordResult/api/playlistClient';
 import {
   ArtistType,
   ConcertSongListType,
   SongType,
-} from '../types/record.result.types';
+} from '@components/recordResult/types/record.result.types';
+import { recordResultNCT127Data } from '@mocks/api/data/recordResultData';
 
-export class PlaylistClient {
-  fetchSongs = async (
-    artist: Exclude<ArtistType, '방구석콘서트'>,
-  ): Promise<SongType[]> => {
-    return await client
-      .get(SongFile[artist])
-      .then((data) => data.data['songList']);
+export class StubPlaylistClient extends PlaylistClient {
+  fetchSongs = async (): Promise<SongType[]> => {
+    return new Promise((res) => res(recordResultNCT127Data['songList']));
   };
 
   fetchConcertSongs = async (): Promise<ConcertSongListType> => {
-    return client.get(SongFile['방구석콘서트']).then((data) => data.data);
+    return fetch(SongFile['방구석콘서트']).then((res) => res.json());
   };
 
   // 모든 파일 패치 (방구석 콘서트 제외)
@@ -29,9 +26,7 @@ export class PlaylistClient {
     ];
 
     return Promise.all(
-      songFilesExceptConcert.map(
-        async (artist) => await this.fetchSongs(artist),
-      ),
+      songFilesExceptConcert.map(async () => await this.fetchSongs()),
     ).then((list) => list.flat(1));
   };
 }
