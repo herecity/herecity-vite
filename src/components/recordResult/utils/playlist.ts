@@ -1,32 +1,32 @@
-import { SongFile } from '../hooks/usePlaylist';
-import {
-  ArtistType,
-  ConcertSongListType,
-  GroupType,
-  SongType,
-  TagType,
-} from '../types/record.result.types';
+import { GroupType, SongType, TagType } from '../types/record.result.types';
+import { PlaylistClient } from '../api/playlistClient';
 
-export class PlaylistClient {
+/**
+ *
+ * 태그에 따른 플레이리스트 구성
+ *
+ * 1) 방구석콘서트 태그 있을 경우,
+ *    - 콘서트 라이브 곡들만 포함됩니다.
+ *    - 그룹 태그가 있을 경우, 콘서트 곡들 중에서 그룹 태그 교집합 곡들이 포함됩니다.
+ *    - 나머지 태그는 무시됩니다
+ * 2) 그룹 태그 있을 경우,
+ *    - 해당 그룹 곡들과 나머지 태그의 교집합 곡들이 포합됩니다.
+ * 3) 위 태그들 없으면, 모든 곡들 중 선택된 태그가 하나라도 포함된 곡들이 포함됩니다.
+ *
+ * => 합집합 태그 노래 (songs), 교집합 태그 노래 (allTaggedSongs)
+ */
+
+export class Playlist {
   private originalTag: Set<TagType> = new Set();
   private remainTags: Set<TagType> = new Set();
   songs: SongType[] = []; // 태그 합집합 노래들
   allTaggedSongs: SongType[] = []; // 태그 교집합 노래들
+  playlistClient = new PlaylistClient();
 
   constructor(tagList: Set<TagType>) {
     this.originalTag = new Set(tagList.keys());
     this.remainTags = new Set(tagList.keys());
   }
-
-  private fetchSongs = async (artist: ArtistType): Promise<SongType[]> => {
-    return await fetch(SongFile[artist])
-      .then((res) => res.json())
-      .then((data) => data['songList']);
-  };
-
-  private fetchConcertSongs = async (): Promise<ConcertSongListType> => {
-    return await fetch(SongFile['방구석콘서트']).then((res) => res.json());
-  };
 
   private removeTagItem = (item: TagType) => {
     this.remainTags.delete(item);
@@ -37,7 +37,7 @@ export class PlaylistClient {
   };
 
   private handleConcertTag = async () => {
-    const concertSongs = await this.fetchConcertSongs();
+    const concertSongs = await this.playlistClient.fetchConcertSongs();
 
     if (this.isGroupInTag()) {
       const taggedGroups = this.whichGroups();
@@ -74,24 +74,19 @@ export class PlaylistClient {
     const list = await Promise.all(
       taggedGroups.map(async (group) => {
         this.removeTagItem(group);
-        return await this.fetchSongs(group);
+        return await this.playlistClient.fetchSongs(group);
       }),
     ).then((list) => list.flat(1));
 
     this.songs.push(...list);
   };
 
-  // 모든 파일 패치
-  private fetchAllData = async () => {
-    this.songs.push(...(await this.fetchSongs('NCT 127')));
-    this.songs.push(...(await this.fetchSongs('NCT DREAM')));
-    this.songs.push(...(await this.fetchSongs('NCT U')));
-    this.songs.push(...(await this.fetchSongs('WayV')));
-    this.songs.push(...(await this.fetchSongs('SOLO')));
-  };
-
   // 콘서트, 그룹, 타이틀 제외 태그 (this.remainTags) 함수 처리
-  private handleOtherTags = () => {
+  private handleOtherTags = async () => {
+    if (this.songs.length === 0) {
+      this.songs = await this.playlistClient.fetchAllData();
+    }
+
     let handledSongs: Map<string, SongType> = new Map();
 
     this.songs.forEach((song) => {
@@ -114,14 +109,12 @@ export class PlaylistClient {
       await this.handleGroupTag();
     }
 
-    if (this.songs.length === 0) {
-      await this.fetchAllData();
-    }
     if (this.remainTags.size === 0) {
       this.allTaggedSongs = this.songs;
       return;
     }
-    this.handleOtherTags();
+
+    await this.handleOtherTags();
   };
 
   private updateTagCountPerSong = () => {
@@ -150,7 +143,7 @@ export class PlaylistClient {
     this.allTaggedSongs.sort(sortFunction);
   };
 
-  createPlaylist = async () => {
+  create = async () => {
     await this.handleTags();
     this.updateTagCountPerSong();
     this.sortByTagAndRelease();

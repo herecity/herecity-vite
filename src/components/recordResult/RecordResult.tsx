@@ -8,18 +8,18 @@ import Song from './components/Song';
 import { createDeeplink } from './utils/createDeeplink';
 import { getDevice } from './utils/getDevice';
 import { usePlaylist } from './hooks/usePlaylist';
+import { useSearchParams } from 'react-router-dom';
 
 const RecordResult = () => {
   const { musicAppClickListener } = createDeeplink(getDevice());
   const [tags, setTags] = useState<Set<TagType>>(new Set());
   const keywordsRef = useRef<HTMLDivElement>(null);
   const [scrollY, setScrollY] = useState(0);
+  const [params] = useSearchParams();
 
   const loadTags = async () => {
-    const urlSearchParams = new URLSearchParams(window.location.search);
-    const tagParams = Object.fromEntries(urlSearchParams.entries());
-    const tmpTagArr = tagParams.tags.split(',') as TagType[];
-    setTags(new Set(tmpTagArr));
+    const tagParams = params.get('tags')?.split(',') as TagType[];
+    setTags(new Set(tagParams));
   };
 
   const getTagStyle = (idx: number) => {
@@ -38,7 +38,7 @@ const RecordResult = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.screenY > 400) return;
+      if (window.scrollY > 400) return;
       setScrollY(window.scrollY);
     });
   }, []);
