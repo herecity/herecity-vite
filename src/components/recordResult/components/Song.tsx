@@ -28,7 +28,7 @@ const Song = memo(({ song, tags }: Props) => {
   ];
 
   const hasAdditionalInfo = () => {
-    return song.URL_dance || song.URL_mv;
+    return song.URL_dance || song.URL_mv || song.URL_tv;
   };
 
   return (
@@ -69,6 +69,11 @@ const Song = memo(({ song, tags }: Props) => {
           {song.URL_dance && (
             <a target='_blank' href={song.URL_dance} className='button-primary'>
               {'댄스비디오'}
+            </a>
+          )}
+          {song.URL_tv && (
+            <a target='_blank' href={song.URL_tv} className='button-primary'>
+              {'비디오'}
             </a>
           )}
         </div>
