@@ -5,8 +5,8 @@ import App from './components/App.tsx';
 if (process.env.NODE_ENV === 'development') {
   async function initMocks() {
     if (typeof window) {
-      const { worker } = await import('./mocks/worker');
-      worker.start();
+      // const { worker } = await import('./mocks/worker');
+      // worker.start();
     }
   }
   await initMocks();
