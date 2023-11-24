@@ -12,6 +12,9 @@ export default defineConfig({
       '@styles': '/src/styles',
       '@routes': '/src/routes',
       '@pages': '/src/pages',
+      '@api': '/src/api',
+      '@mocks': '/src/mocks',
+      '@tests': '/src/tests',
     },
   },
   css: {

@@ -7,6 +7,7 @@ const RecordPage = () => {
       <Helmet>
         <title>히어시티 | 레코드샵</title>
         <meta property='og:site_name' content='히어시티' />
+        <meta name='description' content='엔시티 플레이리스트 #히어시티' />
         <meta
           property='og:title'
           content='엔시티 키워드별 플레이리스트 #히어시티 #레코드샵'

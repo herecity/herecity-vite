@@ -24,12 +24,12 @@
       font-weight: 600;
     }
 
-    .keywords-container {
+    .tags-container {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
 
-      .keyword {
+      .tag {
         height: fit-content;
         cursor: pointer;
         padding: 10px;

@@ -5,12 +5,10 @@ export const getDevice = (): DeviceType => {
   let agent_str = navigator.userAgent;
   // Android
   if (/Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(agent_str)) {
-    console.log(`Android`);
     return 'ANDROID';
   }
   // Iphone
   if (/iPhone|iPad|iPod/i.test(agent_str)) {
-    console.log(`Iphone`);
     return 'IPHONE';
   }
   // Windows
