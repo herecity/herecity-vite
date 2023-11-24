@@ -15,6 +15,7 @@ export function usePlaylist(tagList: Set<TagType>) {
   const [playlist, setPlaylist] = useState<SongType[]>([]);
 
   const getSongList = async () => {
+    setIsLoading(true);
     const playlist = new Playlist(tagList, new PlaylistClient());
     setPlaylist(await playlist.create());
     setIsLoading(false);
