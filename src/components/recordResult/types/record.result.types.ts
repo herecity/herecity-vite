@@ -2,7 +2,7 @@ export type MusicPlatfomTypes = 'bugs' | 'genie' | 'melon';
 
 export type SongType = {
   title: string;
-  artist: string & ArtistType;
+  artist: string | ArtistType;
   album: string;
   image: string;
   uid: Record<MusicPlatfomTypes, string>;
@@ -53,6 +53,7 @@ export type TagType =
   | '기분전환'
   | '나만알기아까운'
   | '내적댄스'
+  | '비트맛집힙합'
   | '스트레스아웃'
   | '울고싶은날'
   | '자신감뿜뿜'
@@ -73,7 +74,8 @@ export type TagType =
   | 'SM STATION'
   | 'SPECIAL'
   | ArtistType
-  | OnlyTitle;
+  | OnlyTitle
+  | 'NO_TAG';
 
 export type OnlyTitle = 'ONLYTITLE';
 

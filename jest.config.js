@@ -24,5 +24,5 @@ export default {
     '^@mocks(.*)$': '<rootDir>/src/mocks$1',
     '^@api(.*)$': '<rootDir>/src/api$1',
   },
-  // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  // setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 };

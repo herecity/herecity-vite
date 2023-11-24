@@ -5,7 +5,7 @@ import './styles/record.result.styles.scss';
 import { images } from '@assets/images';
 import Loading from '@components/common/Loading/Loading';
 import Song from './components/Song';
-import { createDeeplink } from './utils/createDeeplink';
+import { createDeeplink } from './libs/createDeeplink';
 import { getDevice } from './utils/getDevice';
 import { usePlaylist } from './hooks/usePlaylist';
 import { useSearchParams } from 'react-router-dom';

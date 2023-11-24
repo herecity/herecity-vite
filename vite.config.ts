@@ -4,6 +4,11 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: ['./vitest.setup.ts'],
+  },
   resolve: {
     alias: {
       '@components': '/src/components',
@@ -13,6 +18,8 @@ export default defineConfig({
       '@routes': '/src/routes',
       '@pages': '/src/pages',
       '@api': '/src/api',
+      '@mocks': '/src/mocks',
+      '@tests': '/src/tests',
     },
   },
   css: {

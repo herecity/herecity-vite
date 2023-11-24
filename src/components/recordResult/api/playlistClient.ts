@@ -1,21 +1,28 @@
-import { client } from '@api/api';
+import { client, testClient } from '@api/api';
 import {
   ArtistType,
   ConcertSongListType,
   SongType,
 } from '../types/record.result.types';
+import { AxiosInstance } from 'axios';
 
 export class PlaylistClient {
+  client: AxiosInstance;
+
+  constructor(isTest: boolean = false) {
+    this.client = isTest ? testClient : client;
+  }
+
   fetchSongs = async (
     artist: Exclude<ArtistType, '방구석콘서트'>,
   ): Promise<SongType[]> => {
-    return await client
+    return await this.client
       .get(SongFile[artist])
       .then((data) => data.data['songList']);
   };
 
   fetchConcertSongs = async (): Promise<ConcertSongListType> => {
-    return client.get(SongFile['방구석콘서트']).then((data) => data.data);
+    return this.client.get(SongFile['방구석콘서트']).then((data) => data.data);
   };
 
   // 모든 파일 패치 (방구석 콘서트 제외)

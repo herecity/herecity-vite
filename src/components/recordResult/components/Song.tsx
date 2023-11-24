@@ -1,5 +1,10 @@
 import { memo } from 'react';
-import { SongType, TagType } from '../types/record.result.types';
+import {
+  ArtistType,
+  GroupType,
+  SongType,
+  TagType,
+} from '../types/record.result.types';
 import '../styles/song.styles.scss';
 
 type Props = {
@@ -8,6 +13,20 @@ type Props = {
 };
 
 const Song = memo(({ song, tags }: Props) => {
+  const isGroupType = (tag: string | ArtistType): tag is GroupType => {
+    return (
+      tag === 'NCT 127' ||
+      tag === 'NCT U' ||
+      tag === 'NCT DREAM' ||
+      tag === 'WayV'
+    );
+  };
+
+  const tagArr = [
+    ...song.tags,
+    ...(isGroupType(song.artist) ? [song.artist] : []),
+  ];
+
   const hasAdditionalInfo = () => {
     return song.URL_dance || song.URL_mv;
   };
@@ -28,15 +47,12 @@ const Song = memo(({ song, tags }: Props) => {
           <div className='item artist'>{song.artist}</div>
         </div>
         <div className='item tags'>
-          {[...song.tags, song.artist]
+          {tagArr
             .filter((tag) => tags.has(tag))
             .map((_, idx) => (
               <div className='bar' key={idx} />
             ))}
-          {Array(
-            3 -
-              [...song.tags, song.artist].filter((tag) => tags.has(tag)).length,
-          )
+          {Array(3 - tagArr.filter((tag) => tags.has(tag)).length)
             .fill(0)
             .map((_, idx) => (
               <div className='bar not' key={idx} />

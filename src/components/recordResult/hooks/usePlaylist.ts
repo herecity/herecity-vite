@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { SongType, TagType } from '../types/record.result.types';
-import { Playlist } from '../utils/playlist';
+import { Playlist } from '../libs/playlist';
 import { PlaylistClient } from '../api/playlistClient';
 
 /**
