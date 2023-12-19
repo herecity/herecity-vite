@@ -65,6 +65,7 @@ const Cityboard = () => {
             {cityboardList
               ?.filter(filterGroup)
               .filter(filterEmojiType)
+              .slice(0, 20)
               .map((item, idx) => (
                 <CityboardItem item={item} key={idx} />
               ))}
