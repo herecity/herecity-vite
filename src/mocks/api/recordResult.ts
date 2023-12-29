@@ -26,7 +26,6 @@ export const recordResultHandlers = [
   http.get(`${baseURLForTest}${SongFile['SOLO']}`, () => {
     return HttpResponse.json(recordResultSoloData);
   }),
-
   http.get(`${baseURLForTest}${SongFile['방구석콘서트']}`, () => {
     return HttpResponse.json(recordResultConcertData);
   }),

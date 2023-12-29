@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { SongType, TagType } from '../types/record.result.types';
-import { Playlist } from '../libs/playlist';
 import { PlaylistClient } from '../api/playlistClient';
+import { PlaylistMaker } from '../libs/playlistMaker';
 
 /**
  *
@@ -16,8 +16,8 @@ export function usePlaylist(tagList: Set<TagType>) {
 
   const getSongList = async () => {
     setIsLoading(true);
-    const playlist = new Playlist(tagList, new PlaylistClient());
-    setPlaylist(await playlist.create());
+    const playlistMaker = new PlaylistMaker(tagList, new PlaylistClient());
+    setPlaylist(await playlistMaker.create());
     setIsLoading(false);
   };
 

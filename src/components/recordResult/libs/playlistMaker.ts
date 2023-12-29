@@ -16,7 +16,7 @@ import { PlaylistClient } from '../api/playlistClient';
  * => 합집합 태그 노래 (songs), 교집합 태그 노래 (allTaggedSongs)
  */
 
-export class Playlist {
+export class PlaylistMaker {
   private originalTag: Set<TagType> = new Set();
   private remainTags: Set<TagType> = new Set();
   songs: SongType[] = []; // 태그 합집합 노래들

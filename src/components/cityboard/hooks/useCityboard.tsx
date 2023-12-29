@@ -7,13 +7,13 @@ export function useCityboard() {
     null,
   );
 
-  const fetchJSON = async () => {
-    const json: { cityboard: CityBoardType[] } = await fetch(
-      '/assets/data/nkeyboard/nkeyboard.json',
-    ).then((res) => res.json());
-
-    setCityboardList(json['cityboard']);
-    setIsLoading(false);
+  const fetchJSON = () => {
+    fetch('/assets/data/nkeyboard/nkeyboard.json')
+      .then((res) => res.json())
+      .then((data) => {
+        setCityboardList(data['cityboard']);
+        setIsLoading(false);
+      });
   };
 
   useEffect(() => {
