@@ -49,7 +49,10 @@
 
   .tag-option-btn {
     align-self: flex-start;
-    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 20px 0;
 
     span {
       font-size: 18px;
@@ -95,5 +98,30 @@
     align-items: center;
     gap: 4px;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 600px) {
+  .nchelin-root {
+    .main-container {
+      padding: 50px 20px;
+    }
+    .headline {
+      padding: 30px 0;
+      color: $gray600;
+      word-break: keep-all;
+      font-size: 28px;
+    }
+
+    .search-bar-container {
+      .input-container {
+        padding: 18px 20px;
+
+        .input {
+          flex: 1;
+          font-size: 18px;
+        }
+      }
+    }
   }
 }

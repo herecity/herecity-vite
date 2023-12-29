@@ -34,7 +34,7 @@ const Nchelin = () => {
     <div className={`nchelin-root`}>
       <Navbar />
       <main className='main-container'>
-        <h1 className='headline'>{'원하는 맛시태그 선택해서 트윗 찾아보기'}</h1>
+        <h1 className='headline'>{'원하는 맛시태그로 검색하기'}</h1>
         <div className='search-bar-container'>
           <form
             onSubmit={(e) => {
@@ -44,7 +44,7 @@ const Nchelin = () => {
             <div className='input-container'>
               <input
                 className='input'
-                placeholder='맛시태그를 적용할 지역을 입력해주세요'
+                placeholder='검색할 지역을 입력해주세요'
                 onChange={(e) => setSearch(e.target.value)}
                 type='text'
                 value={search}
