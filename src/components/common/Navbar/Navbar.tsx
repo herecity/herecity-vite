@@ -1,6 +1,7 @@
-import { memo } from 'react';
+import { memo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './styles/navbar.styles.scss';
+import { images } from '@assets/images';
 
 export const tabList = [
   {
@@ -26,16 +27,25 @@ export const tabList = [
 ];
 
 const Navbar = memo(() => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className='navbar-root'>
+    <nav className={`navbar-root ${isOpen ? 'open' : ''}`}>
       <div className='navbar-container'>
-        <Link to={'/'}>
-          <span className='logo'>{'HERECITY'}</span>
-        </Link>
-        <ul className='tab-list-container'>
+        <div className='logo-container'>
+          <Link to={'/'}>
+            <span className='logo'>{'HERECITY'}</span>
+          </Link>
+          <button
+            onClick={() => setIsOpen((prev) => !prev)}
+            className='mobile-toggle-btn'>
+            <img src={images.hamburger} alt='토글 버튼' />
+          </button>
+        </div>
+        <ul className={`tab-list-container`}>
           {tabList.map((tab) => {
             return (
-              <Link key={tab.tab} to={`/${tab.tab}`}>
+              <Link className='tab' key={tab.tab} to={`/${tab.tab}`}>
                 <li>{tab.name}</li>
               </Link>
             );

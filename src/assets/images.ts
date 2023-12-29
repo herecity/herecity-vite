@@ -10,5 +10,6 @@ export const images = {
   search: '/assets/icon/ic-search.svg',
   delete: '/assets/icon/ic-delete.svg',
   triangle: '/assets/icon/ic-triangle.svg',
+  hamburger: '/assets/icon/ic-hamburger.svg',
   members: {},
 };
