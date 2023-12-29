@@ -1,0 +1,123 @@
+.navbar-root {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.navbar-container {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: $max-page-width;
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: $white;
+      text-shadow: $gray500 0px 0 2px;
+    }
+
+    .mobile-toggle-btn {
+      display: none;
+    }
+  }
+
+  .tab-list-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    .tab {
+      font-size: 18px;
+      font-weight: 500;
+      transition: color 300ms ease-in-out;
+      color: $white;
+      text-shadow: $gray500 0px 0 2px;
+
+      &:hover {
+        color: $gray600;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-root {
+    padding: 0;
+
+    .navbar-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .logo-container {
+        width: 100%;
+        min-height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+
+        .logo {
+          font-size: 28px;
+          font-weight: 700;
+          color: $white;
+          text-shadow: $gray500 0px 0 2px;
+        }
+
+        .mobile-toggle-btn {
+          display: block;
+        }
+      }
+
+      .tab-list-container {
+        display: none;
+      }
+    }
+
+    &.open {
+      background-color: $black-opacity;
+      color: $black;
+      z-index: 99999;
+
+      .navbar-container {
+        .logo-container {
+          .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: $white;
+            text-shadow: $gray600 0px 0 2px;
+          }
+        }
+
+        .tab-list-container {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0;
+          background-color: $black-opacity;
+
+          .tab {
+            width: 100%;
+            padding: 20px 20px;
+
+            &:hover {
+              background-color: $whiteOpacity;
+            }
+          }
+        }
+      }
+    }
+  }
+}

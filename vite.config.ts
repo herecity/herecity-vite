@@ -11,6 +11,26 @@ export default defineConfig({
       '@hooks': '/src/hooks',
       '@styles': '/src/styles',
       '@routes': '/src/routes',
+      '@pages': '/src/pages',
+      '@api': '/src/api',
+      '@mocks': '/src/mocks',
+      '@tests': '/src/tests',
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "./src/styles/_utils";',
+      },
+    },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-router-dom', 'react-dom'],
+        },
+      },
     },
   },
 });

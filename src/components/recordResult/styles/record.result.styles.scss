@@ -1,0 +1,122 @@
+.record-result-root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @include background-gradient($green);
+
+  .main {
+    position: fixed;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+
+    .keywords-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 30px 20px;
+      font-size: 30px;
+      font-weight: 700;
+      color: $black;
+
+      .tag {
+        font-size: 40px;
+        background: linear-gradient(to right top, #708f56, #437329, #39412b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+      }
+
+      .song-cnt {
+        text-align: center;
+      }
+    }
+
+    .share-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px 20px;
+      transition: transform 300ms ease-in-out;
+
+      button > img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .playlist-section {
+    width: 100%;
+    height: fit-content;
+    transform: translateY(400px);
+    display: flex;
+    justify-content: center;
+    background-color: $white;
+    padding: 30px 0;
+    border-radius: 16px 16px 0 0;
+
+    .song-cnt {
+      padding: 0 20px;
+    }
+
+    ul {
+      width: 100%;
+      min-height: calc(100vh - 400px);
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      background-color: $white;
+    }
+  }
+
+  .add-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: $green-darken;
+    border-radius: 50%;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .record-result-root {
+    .main {
+      .keywords-container {
+        .tag {
+          text-align: left;
+        }
+
+        .song-cnt {
+        }
+      }
+
+      .share-container {
+        button > img {
+        }
+      }
+    }
+
+    .playlist-section {
+      .song-cnt {
+      }
+
+      ul {
+      }
+    }
+
+    .add-btn {
+      img {
+      }
+    }
+  }
+}

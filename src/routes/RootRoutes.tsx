@@ -1,23 +1,26 @@
+import NotFoundPage from '@pages/NotFoundPage';
+import CityBoardPage from '@pages/cityboard/CityBoardPage';
+import HomePage from '@pages/home/HomePage';
+import Nbti from '@pages/nbti/Nbti';
+import NchelinPage from '@pages/nchelin/Nchelin';
+import RecordPage from '@pages/record/RecordPage';
+import RecordResultPage from '@pages/record/RecordResultPage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from '../components/pages/home/Home';
-import Record from '../components/pages/record/Record';
-import CityBoard from '../components/pages/cityboard/CityBoard';
-import Nchelin from '@components/pages/nchelin/Nchelin';
-import Nbti from '@components/pages/nbti/Nbti';
-import RecordResult from '@components/pages/record/result/RecordResult';
 
 const RootRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<HomePage />} />
         <Route path='/record'>
-          <Route index element={<Record />} />
-          <Route path='result' element={<RecordResult />} />
+          <Route index element={<RecordPage />} />
+          <Route path='result' element={<RecordResultPage />} />
         </Route>
-        <Route path='/city-board' element={<CityBoard />} />
-        <Route path='/nchelin' element={<Nchelin />} />
+        <Route path='/city-board' element={<CityBoardPage />} />
+        <Route path='/nkeyboard' element={<CityBoardPage />} />
+        <Route path='/nchelin' element={<NchelinPage />} />
         <Route path='/nbti' element={<Nbti />} />
+        <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );
