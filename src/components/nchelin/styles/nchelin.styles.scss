@@ -17,6 +17,7 @@
     padding: 30px 0;
     color: $gray600;
     word-break: keep-all;
+    text-align: center;
   }
 
   .search-bar-container,
@@ -26,7 +27,11 @@
   }
 
   .search-bar-container {
+    width: 100%;
+    max-width: 100%;
+
     .input-container {
+      width: 100%;
       display: flex;
       background-color: $white;
       padding: 20px 24px;
