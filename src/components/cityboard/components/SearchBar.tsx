@@ -10,7 +10,6 @@ type Props = {
 const SearchBar = ({ cityboardList }: Props) => {
   const [search, setSearch] = useState('');
   const [textList, setTextList] = useState<string[] | null>(null);
-  const [filteredList, setFilteredList] = useState<string[] | null>(null);
 
   const handleTextClick = (text: string) => {
     window.navigator.clipboard.writeText(text).then(() => {
@@ -18,25 +17,16 @@ const SearchBar = ({ cityboardList }: Props) => {
     });
   };
 
-  const findMatches = () => {
-    if (!textList) return;
-    if (search === '') {
-      setFilteredList(null);
-      return;
-    }
+  const filteredList = textList?.filter((item) =>
+    item.match(new RegExp(search, 'gi')),
+  );
 
-    const regex = new RegExp(search, 'gi');
-    const tmpList = textList.filter((item) => item.match(regex));
-    setFilteredList(tmpList.length > 0 ? tmpList : null);
-  };
+  const isShownFilteredList =
+    search !== '' && filteredList && filteredList.length > 0;
 
   useEffect(() => {
     setTextList(getOnlyTextFromCityboard(cityboardList));
   }, [cityboardList]);
-
-  useEffect(() => {
-    findMatches();
-  }, [search]);
 
   return (
     <section className='cityboard-search-bar-root'>
@@ -55,7 +45,7 @@ const SearchBar = ({ cityboardList }: Props) => {
             </div>
           )}
         </div>
-        {filteredList && (
+        {isShownFilteredList && (
           <div className='list-container'>
             {filteredList.map((text) => {
               return (
