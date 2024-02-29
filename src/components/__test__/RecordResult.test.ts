@@ -32,7 +32,7 @@ describe('playlist lib', () => {
     expect(
       list.every((song) => {
         let check = false;
-        for (let tag of song.tags) {
+        for (const tag of song.tags) {
           if (tags.includes(tag)) {
             check = true;
             break;
