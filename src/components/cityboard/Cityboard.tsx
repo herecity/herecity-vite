@@ -42,9 +42,10 @@ const Cityboard = () => {
         <section className='filter-section'>
           <div>
             <select
-              onChange={(e) =>
-                setSelectedGroup(e.target.value as CityBoardGroupType | 'all')
-              }>
+              onChange={(e) => {
+                setPage(1);
+                setSelectedGroup(e.target.value as CityBoardGroupType | 'all');
+              }}>
               {groups.map((group) => (
                 <option value={group.id} key={group.id}>
                   {group.label}
@@ -52,9 +53,10 @@ const Cityboard = () => {
               ))}
             </select>
             <select
-              onChange={(e) =>
-                setSelectedEmoji(e.target.value as CityBoardEmojiType | 'all')
-              }>
+              onChange={(e) => {
+                setPage(1);
+                setSelectedEmoji(e.target.value as CityBoardEmojiType | 'all');
+              }}>
               {emojiTypes.map((group) => (
                 <option key={group.id} value={group.id}>
                   {group.label}
