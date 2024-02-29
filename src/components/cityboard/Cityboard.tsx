@@ -7,7 +7,7 @@ import {
   CityBoardType,
 } from './types/cityboard.types';
 import Loading from '@components/common/Loading/Loading';
-import Navbar from '@components/common/Navbar/Navbar';
+import Navbar from '@components/common/Header/Header';
 import './styles/cityboard.styles.scss';
 import CityboardItem from './components/CityboardItem';
 import { useInfiniteScroll } from './hooks/useInfiniteScroll';

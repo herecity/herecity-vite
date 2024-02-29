@@ -1,7 +1,8 @@
+import Nbti from '@components/nbti/Nbti';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Nbti = () => {
+const NbtiPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -9,7 +10,7 @@ const Nbti = () => {
     navigate('/', { replace: true });
   }, []);
 
-  return <div>Nbti</div>;
+  return <Nbti />;
 };
 
-export default Nbti;
+export default NbtiPage;

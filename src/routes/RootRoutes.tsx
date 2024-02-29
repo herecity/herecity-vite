@@ -6,7 +6,7 @@ const RecordPage = lazy(() => import('@pages/record/RecordPage'));
 const RecordResultPage = lazy(() => import('@pages/record/RecordResultPage'));
 const CityBoardPage = lazy(() => import('@pages/cityboard/CityBoardPage'));
 const NchelinPage = lazy(() => import('@pages/nchelin/Nchelin'));
-const Nbti = lazy(() => import('@pages/nbti/Nbti'));
+const Nbti = lazy(() => import('@pages/nbti/NbtiPage'));
 const NotFoundPage = lazy(() => import('@pages/NotFoundPage'));
 
 const RootRoutes = () => {
