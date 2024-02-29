@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
 const HomePage = lazy(() => import('@pages/home/HomePage'));
 const RecordPage = lazy(() => import('@pages/record/RecordPage'));
@@ -20,7 +20,7 @@ const RootRoutes = () => {
             <Route path='result' element={<RecordResultPage />} />
           </Route>
           <Route path='/city-board' element={<CityBoardPage />} />
-          <Route path='/nkeyboard' element={<CityBoardPage />} />
+          <Route path='/nkeyboard' element={<Navigate to='/city-board' />} />
           <Route path='/nchelin' element={<NchelinPage />} />
           <Route path='/nbti' element={<Nbti />} />
           <Route path='*' element={<NotFoundPage />} />

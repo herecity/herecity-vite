@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { CityBoardType } from '../types/cityboard.types';
 
 export function useCityboard() {
@@ -7,14 +7,14 @@ export function useCityboard() {
     null,
   );
 
-  const fetchJSON = () => {
+  const fetchJSON = useCallback(() => {
     fetch('/assets/data/nkeyboard/nkeyboard.json')
       .then((res) => res.json())
       .then((data) => {
         setCityboardList(data['cityboard']);
         setIsLoading(false);
       });
-  };
+  }, []);
 
   useEffect(() => {
     fetchJSON();

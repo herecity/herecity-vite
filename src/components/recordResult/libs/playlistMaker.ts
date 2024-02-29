@@ -88,7 +88,7 @@ export class PlaylistMaker {
       this.songs = await this.playlistClient.fetchAllData();
     }
 
-    let handledSongs: Map<string, SongType> = new Map();
+    const handledSongs: Map<string, SongType> = new Map();
 
     this.songs.forEach((song) => {
       this.remainTags.forEach((tag) => {
