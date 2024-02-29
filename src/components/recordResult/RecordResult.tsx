@@ -1,4 +1,4 @@
-import Navbar from '@components/common/Navbar/Navbar';
+import Navbar from '@components/common/Header/Header';
 import { useEffect, useRef, useState } from 'react';
 import { TagType } from './types/record.result.types';
 import './styles/record.result.styles.scss';

@@ -1,4 +1,4 @@
-import Navbar from '@components/common/Navbar/Navbar';
+import Navbar from '@components/common/Header/Header';
 import './styles/nchelin.styles.scss';
 import { useState } from 'react';
 import { images } from '@assets/images';

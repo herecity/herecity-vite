@@ -19,7 +19,7 @@ export function usePlaylist(tagList: Set<TagType>) {
     const playlistMaker = new PlaylistMaker(tagList, new PlaylistClient());
     setPlaylist(await playlistMaker.create());
     setIsLoading(false);
-  }, []);
+  }, [tagList]);
 
   useEffect(() => {
     if (tagList.size === 0) {
