@@ -10,6 +10,7 @@ import Loading from '@components/common/Loading/Loading';
 import Navbar from '@components/common/Navbar/Navbar';
 import './styles/cityboard.styles.scss';
 import CityboardItem from './components/CityboardItem';
+import { useInfiniteScroll } from './hooks/useInfiniteScroll';
 
 const Cityboard = () => {
   const { isLoading, cityboardList } = useCityboard();
@@ -19,6 +20,9 @@ const Cityboard = () => {
   const [selectedEmoji, setSelectedEmoji] = useState<
     CityBoardEmojiType | 'all'
   >('all');
+
+  const [page, setPage] = useState(1);
+  const { setTarget } = useInfiniteScroll(() => setPage((prev) => prev + 1));
 
   const filterGroup = (item: CityBoardType) => {
     if (selectedGroup === 'all') return true;
@@ -63,11 +67,13 @@ const Cityboard = () => {
           <ul>
             {isLoading && <Loading color='blue' />}
             {cityboardList
+              ?.slice(0, 10 * page)
               ?.filter(filterGroup)
               .filter(filterEmojiType)
               .map((item, idx) => (
                 <CityboardItem item={item} key={idx} />
               ))}
+            <div ref={setTarget} />
           </ul>
         </section>
       </main>
