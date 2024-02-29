@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { SongType, TagType } from '../types/record.result.types';
 import { PlaylistClient } from '../api/playlistClient';
 import { PlaylistMaker } from '../libs/playlistMaker';
@@ -14,12 +14,12 @@ export function usePlaylist(tagList: Set<TagType>) {
   const [isLoading, setIsLoading] = useState(true);
   const [playlist, setPlaylist] = useState<SongType[]>([]);
 
-  const getSongList = async () => {
+  const getSongList = useCallback(async () => {
     setIsLoading(true);
     const playlistMaker = new PlaylistMaker(tagList, new PlaylistClient());
     setPlaylist(await playlistMaker.create());
     setIsLoading(false);
-  };
+  }, []);
 
   useEffect(() => {
     if (tagList.size === 0) {
