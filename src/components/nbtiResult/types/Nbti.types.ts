@@ -41,7 +41,7 @@ export type NctMember =
   | '유타'
   | '런쥔';
 
-export type NbtiMembers = Record<NbtiType, NctMember[]>;
+export type NbtiMembers = Record<NbtiType, readonly NctMember[]>;
 
 export type NbtiMemberItem = Record<
   NctMember,
@@ -50,7 +50,7 @@ export type NbtiMemberItem = Record<
 
 export type NbtiResultFormItem = {
   type: string;
-  sameMembers: NctMember[];
-  goodMembers: NctMember[];
-  description: string[];
+  sameMembers: readonly NctMember[];
+  goodMembers: readonly NctMember[];
+  description: readonly string[];
 };
