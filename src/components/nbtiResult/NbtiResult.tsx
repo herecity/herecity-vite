@@ -35,6 +35,10 @@ const NbtiResult = () => {
             text: `히어시티 N'BTI 당신은 어떤 시즈니인가요? 나의 덕질유형 알아보기`,
             url,
           });
+        } else {
+          window.navigator.clipboard.writeText(url).then(() => {
+            alert(`복사 완료🧡\n원하는 곳에 바로 공유해보세요!`);
+          });
         }
     }
   };
