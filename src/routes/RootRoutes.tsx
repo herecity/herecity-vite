@@ -1,3 +1,4 @@
+import NbtiResultPage from '@pages/nbti/NbtiResultPage';
 import { Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
@@ -22,7 +23,11 @@ const RootRoutes = () => {
           <Route path='/city-board' element={<CityBoardPage />} />
           <Route path='/nkeyboard' element={<Navigate to='/city-board' />} />
           <Route path='/nchelin' element={<NchelinPage />} />
-          <Route path='/nbti' element={<Nbti />} />
+          <Route path='/nbti'>
+            <Route index element={<Nbti />} />
+            <Route path='result' element={<NbtiResultPage />} />
+          </Route>
+
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
       </Suspense>
