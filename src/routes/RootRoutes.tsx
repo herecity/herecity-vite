@@ -1,4 +1,3 @@
-import NbtiResultPage from '@pages/nbti/NbtiResultPage';
 import { Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
@@ -8,6 +7,7 @@ const RecordResultPage = lazy(() => import('@pages/record/RecordResultPage'));
 const CityBoardPage = lazy(() => import('@pages/cityboard/CityBoardPage'));
 const NchelinPage = lazy(() => import('@pages/nchelin/Nchelin'));
 const Nbti = lazy(() => import('@pages/nbti/NbtiPage'));
+const NbtiResultPage = lazy(() => import('@pages/nbti/NbtiResultPage'));
 const NotFoundPage = lazy(() => import('@pages/NotFoundPage'));
 
 const RootRoutes = () => {
