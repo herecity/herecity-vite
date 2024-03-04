@@ -157,7 +157,7 @@ const NBTI_RESULT_FORM: Record<Exclude<NbtiType, 'yet'>, NbtiResultFormItem> = {
     sameMembers: NBTI_MEMBERS.enfj,
     goodMembers: [...NBTI_MEMBERS.isfp, ...NBTI_MEMBERS.infp],
     description: [
-      '우리시티가 벌써 6년차...칠감이 오년전이래..감수성이 풍부한 덕질을 즐기는 당신!',
+      '우리시티가 벌써 9년차...칠감이 팔년전이래..감수성이 풍부한 덕질을 즐기는 당신!',
       '다정하면서도 책임감이 강해 다른 덕후들의 마음을 꽉 사로잡고 계시는군요?',
       '덕메들과의 모임에서도 대화를 이끌어 나가는 걸 좋아하시네요.',
       '"아름다운 시간만 쌓자 예에~ 예에~" 갈등을 싫어해 말을 할 때 상대방의 기분이 나쁘지 않게 잘 돌려말해요.',
