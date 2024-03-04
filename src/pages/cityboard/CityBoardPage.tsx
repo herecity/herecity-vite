@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 
 const CityBoardPage = () => {
   return (
-    <div>
+    <>
       <Helmet>
         <title>히어시티 | 시티보드</title>
         <meta property='og:site_name' content='히어시티' />
@@ -16,7 +16,7 @@ const CityBoardPage = () => {
         <meta property='og:url' content='https://here-city.com/city-board' />
       </Helmet>
       <Cityboard />;
-    </div>
+    </>
   );
 };
 
