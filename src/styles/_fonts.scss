@@ -1,1 +1,45 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
+
+//font mixin
+@mixin headline1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+@mixin headline2 {
+  font-size: 1.7rem;
+  line-height: 2rem;
+}
+
+@mixin subtitle1 {
+  font-size: 1.45rem;
+  line-height: 1.8rem;
+}
+
+@mixin subtitle2 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+@mixin button {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@mixin body {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@mixin caption {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+@mixin bold {
+  font-weight: 600;
+}
+
+@mixin regular {
+  font-weight: 400;
+}
