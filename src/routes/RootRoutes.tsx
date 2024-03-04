@@ -7,6 +7,7 @@ const RecordResultPage = lazy(() => import('@pages/record/RecordResultPage'));
 const CityBoardPage = lazy(() => import('@pages/cityboard/CityBoardPage'));
 const NchelinPage = lazy(() => import('@pages/nchelin/Nchelin'));
 const Nbti = lazy(() => import('@pages/nbti/NbtiPage'));
+const NbtiResultPage = lazy(() => import('@pages/nbti/NbtiResultPage'));
 const NotFoundPage = lazy(() => import('@pages/NotFoundPage'));
 
 const RootRoutes = () => {
@@ -22,7 +23,11 @@ const RootRoutes = () => {
           <Route path='/city-board' element={<CityBoardPage />} />
           <Route path='/nkeyboard' element={<Navigate to='/city-board' />} />
           <Route path='/nchelin' element={<NchelinPage />} />
-          <Route path='/nbti' element={<Nbti />} />
+          <Route path='/nbti'>
+            <Route index element={<Nbti />} />
+            <Route path='result' element={<NbtiResultPage />} />
+          </Route>
+
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
       </Suspense>
