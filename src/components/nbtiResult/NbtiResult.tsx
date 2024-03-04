@@ -1,6 +1,11 @@
 import Header from '@components/common/Header/Header';
-import { NbtiType, NbtiMembers, NbtiResultFormItem } from './types/Nbti.types';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import {
+  NbtiType,
+  NbtiMembers,
+  NbtiResultFormItem,
+  NBTI,
+} from './types/Nbti.types';
+import { Navigate, useNavigate, useSearchParams } from 'react-router-dom';
 import MemberListItem from './components/MemberListItem';
 import './styles/nbtiResult.styles.scss';
 import { images } from '@assets/images';
@@ -42,6 +47,10 @@ const NbtiResult = () => {
         }
     }
   };
+
+  if (!NBTI.includes(nbtiType)) {
+    return <Navigate to={'/nbti'} />;
+  }
 
   return (
     <div className='nbti-result-root'>

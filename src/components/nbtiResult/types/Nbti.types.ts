@@ -54,3 +54,22 @@ export type NbtiResultFormItem = {
   goodMembers: readonly NctMember[];
   description: readonly string[];
 };
+
+export const NBTI: NbtiType[] = [
+  'isfp',
+  'entp',
+  'esfj',
+  'isfj',
+  'infj',
+  'esfp',
+  'enfj',
+  'entj',
+  'enfp',
+  'intj',
+  'intp',
+  'istj',
+  'istp',
+  'estp',
+  'estj',
+  'infp',
+];
