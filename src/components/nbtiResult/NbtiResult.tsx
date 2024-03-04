@@ -36,7 +36,7 @@ const NbtiResult = () => {
       case 'copy':
         if (navigator.share) {
           navigator.share({
-            title: `당신은 ${String(nbtiType).toUpperCase}이군요?`,
+            title: `당신은 ${String(nbtiType).toUpperCase()}이군요?`,
             text: `히어시티 N'BTI 당신은 어떤 시즈니인가요? 나의 덕질유형 알아보기`,
             url,
           });
