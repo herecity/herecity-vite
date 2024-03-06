@@ -47,15 +47,17 @@ const Header = memo(() => {
             <img src={images.hamburger} alt='토글 버튼' />
           </button>
         </div>
-        <ul className={`tab-list-container`}>
-          {HEADER_LIST.map((tab) => {
-            return (
-              <Link className='tab' key={tab.tab} to={tab.tab}>
-                <li>{tab.name}</li>
-              </Link>
-            );
-          })}
-        </ul>
+        <nav className='navbar'>
+          <ul className={`tab-list-container`}>
+            {HEADER_LIST.map((tab) => {
+              return (
+                <Link className='tab' key={tab.tab} to={tab.tab}>
+                  <li>{tab.name}</li>
+                </Link>
+              );
+            })}
+          </ul>
+        </nav>
       </div>
     </header>
   );
