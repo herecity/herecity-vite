@@ -2,7 +2,7 @@ import { DeviceType } from '../types/record.result.types';
 
 // 접속 기기 정보 가져오기
 export const getDevice = (): DeviceType => {
-  let agent_str = navigator.userAgent;
+  const agent_str = navigator.userAgent;
   // Android
   if (/Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(agent_str)) {
     return 'ANDROID';
