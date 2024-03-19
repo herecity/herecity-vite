@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/App.tsx';
 
+//ci 테스트
 if (process.env.NODE_ENV === 'development') {
   async function initMocks() {
     if (typeof window) {
@@ -11,6 +12,7 @@ if (process.env.NODE_ENV === 'development') {
   }
   await initMocks();
 }
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <App />
