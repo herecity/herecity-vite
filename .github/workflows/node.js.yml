@@ -26,3 +26,4 @@ jobs:
           node-version: '20.x'
       - name: Install dependencies
         run: yarn --frozen-lockfile
+        run: yarn test
