@@ -91,7 +91,7 @@ const groups: { label: string; id: 'all' | CityBoardGroupType }[] = [
     id: '127',
   },
   {
-    label: 'NCT DERAM',
+    label: 'NCT DREAM',
     id: 'DREAM',
   },
   {
