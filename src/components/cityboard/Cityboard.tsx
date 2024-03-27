@@ -10,7 +10,6 @@ import Loading from '@components/common/Loading/Loading';
 import Navbar from '@components/common/Header/Header';
 import './styles/cityboard.styles.scss';
 import CityboardItem from './components/CityboardItem';
-import { useInfiniteScroll } from './hooks/useInfiniteScroll';
 
 const Cityboard = () => {
   const { isLoading, cityboardList } = useCityboard();
@@ -20,9 +19,6 @@ const Cityboard = () => {
   const [selectedEmoji, setSelectedEmoji] = useState<
     CityBoardEmojiType | 'all'
   >('all');
-
-  const [page, setPage] = useState(1);
-  const { setTarget } = useInfiniteScroll(() => setPage((prev) => prev + 1));
 
   const filterGroup = (item: CityBoardType) => {
     if (selectedGroup === 'all') return true;
@@ -43,7 +39,6 @@ const Cityboard = () => {
           <div>
             <select
               onChange={(e) => {
-                setPage(1);
                 setSelectedGroup(e.target.value as CityBoardGroupType | 'all');
               }}>
               {groups.map((group) => (
@@ -54,7 +49,6 @@ const Cityboard = () => {
             </select>
             <select
               onChange={(e) => {
-                setPage(1);
                 setSelectedEmoji(e.target.value as CityBoardEmojiType | 'all');
               }}>
               {emojiTypes.map((group) => (
@@ -69,13 +63,11 @@ const Cityboard = () => {
           <ul>
             {isLoading && <Loading color='blue' />}
             {cityboardList
-              ?.slice(0, 10 * page)
               ?.filter(filterGroup)
               .filter(filterEmojiType)
               .map((item, idx) => (
                 <CityboardItem item={item} key={idx} />
               ))}
-            <div ref={setTarget} />
           </ul>
         </section>
       </main>
@@ -99,7 +91,7 @@ const groups: { label: string; id: 'all' | CityBoardGroupType }[] = [
     id: '127',
   },
   {
-    label: 'NCT DERAM',
+    label: 'NCT DREAM',
     id: 'DREAM',
   },
   {
