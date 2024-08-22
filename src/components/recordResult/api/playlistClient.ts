@@ -1,4 +1,4 @@
-import { client, testClient } from '@api/api';
+import { client, testClient } from '@/api/api';
 import {
   ArtistType,
   ConcertSongListType,

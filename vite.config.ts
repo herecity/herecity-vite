@@ -6,15 +6,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@components': '/src/components',
-      '@assets': '/src/assets',
-      '@hooks': '/src/hooks',
-      '@styles': '/src/styles',
-      '@routes': '/src/routes',
-      '@pages': '/src/pages',
-      '@api': '/src/api',
-      '@mocks': '/src/mocks',
-      '@tests': '/src/tests',
+      '@': '/src',
     },
   },
   css: {

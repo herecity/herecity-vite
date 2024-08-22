@@ -1,7 +1,7 @@
-import Record from '@components/record/Record';
+import Record from '@/components/record/Record';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { withRouter } from '@tests/withRouter';
+import { withRouter } from '@/tests/withRouter';
 import { Route, useLocation } from 'react-router-dom';
 import '@testing-library/jest-dom';
 

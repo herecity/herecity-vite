@@ -1,4 +1,4 @@
-import RecordResult from '@components/recordResult/RecordResult';
+import RecordResult from '@/components/recordResult/RecordResult';
 
 const RecordResultPage = () => {
   return <RecordResult />;

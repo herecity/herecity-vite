@@ -6,8 +6,8 @@ import {
   CityBoardGroupType,
   CityBoardType,
 } from './types/cityboard.types';
-import Loading from '@components/common/Loading/Loading';
-import Navbar from '@components/common/Header/Header';
+import Loading from '@/components/common/Loading/Loading';
+import Navbar from '@/components/common/Header/Header';
 import './styles/cityboard.styles.scss';
 import CityboardItem from './components/CityboardItem';
 

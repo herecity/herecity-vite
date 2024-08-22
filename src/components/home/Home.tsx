@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import './styles/home.styles.scss';
-import Header from '@components/common/Header/Header';
+import Header from '@/components/common/Header/Header';
 
 export const TAB_LIST = [
   {

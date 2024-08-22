@@ -1,7 +1,7 @@
-import Navbar from '@components/common/Header/Header';
+import Navbar from '@/components/common/Header/Header';
 import './styles/nchelin.styles.scss';
 import { useState } from 'react';
-import { images } from '@assets/images';
+import { images } from '@/assets/images';
 
 const Nchelin = () => {
   const [activeTags, setActiveTags] = useState(new Set(tags));

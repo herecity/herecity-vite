@@ -1,7 +1,7 @@
 import { memo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './styles/header.styles.scss';
-import { images } from '@assets/images';
+import { images } from '@/assets/images';
 
 export const HEADER_LIST = [
   {
