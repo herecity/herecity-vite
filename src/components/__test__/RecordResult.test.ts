@@ -1,6 +1,6 @@
-import { PlaylistMaker } from '@components/recordResult/libs/playlistMaker';
-import { PlaylistClient } from '@components/recordResult/api/playlistClient';
-import { TagType } from '@components/recordResult/types/record.result.types';
+import { PlaylistMaker } from '@/components/recordResult/libs/playlistMaker';
+import { PlaylistClient } from '@/components/recordResult/api/playlistClient';
+import { TagType } from '@/components/recordResult/types/record.result.types';
 
 //나중에 usePlaylist 훅 테스트로 다시 만들 것
 describe('playlist lib', () => {

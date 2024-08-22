@@ -32,7 +32,7 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/jest-dom", "virtual:60cf364a1d4bdb7101379918194f8d23e19c4285f076fa9f6b3e6678a8765da06ba130debbd470b49dc91f6ea96a4db58eb23d1400dfc7a586a86557850a31f2#npm:6.1.4"],\
           ["@testing-library/react", "virtual:60cf364a1d4bdb7101379918194f8d23e19c4285f076fa9f6b3e6678a8765da06ba130debbd470b49dc91f6ea96a4db58eb23d1400dfc7a586a86557850a31f2#npm:14.1.2"],\
           ["@testing-library/user-event", "virtual:60cf364a1d4bdb7101379918194f8d23e19c4285f076fa9f6b3e6678a8765da06ba130debbd470b49dc91f6ea96a4db58eb23d1400dfc7a586a86557850a31f2#npm:14.5.1"],\
-          ["@types/jest", "npm:29.5.10"],\
+          ["@types/jest", "npm:29.5.12"],\
           ["@types/node", "npm:22.5.0"],\
           ["@types/react", "npm:18.2.33"],\
           ["@types/react-dom", "npm:18.2.14"],\
@@ -59,7 +59,7 @@ const RAW_RUNTIME_STATE =
           ["swiper", "npm:11.0.3"],\
           ["ts-jest", "virtual:60cf364a1d4bdb7101379918194f8d23e19c4285f076fa9f6b3e6678a8765da06ba130debbd470b49dc91f6ea96a4db58eb23d1400dfc7a586a86557850a31f2#npm:29.1.1"],\
           ["ts-node", "virtual:60cf364a1d4bdb7101379918194f8d23e19c4285f076fa9f6b3e6678a8765da06ba130debbd470b49dc91f6ea96a4db58eb23d1400dfc7a586a86557850a31f2#npm:10.9.1"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"],\
+          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"],\
           ["vite", "virtual:60cf364a1d4bdb7101379918194f8d23e19c4285f076fa9f6b3e6678a8765da06ba130debbd470b49dc91f6ea96a4db58eb23d1400dfc7a586a86557850a31f2#npm:4.5.0"],\
           ["vitest", "virtual:60cf364a1d4bdb7101379918194f8d23e19c4285f076fa9f6b3e6678a8765da06ba130debbd470b49dc91f6ea96a4db58eb23d1400dfc7a586a86557850a31f2#npm:0.34.6"]\
         ],\
@@ -2479,7 +2479,7 @@ const RAW_RUNTIME_STATE =
           ["@adobe/css-tools", "npm:4.3.1"],\
           ["@babel/runtime", "npm:7.23.4"],\
           ["@jest/globals", "npm:29.7.0"],\
-          ["@types/jest", "npm:29.5.10"],\
+          ["@types/jest", "npm:29.5.12"],\
           ["@types/jest__globals", null],\
           ["@types/vitest", null],\
           ["aria-query", "npm:5.3.0"],\
@@ -2739,10 +2739,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/jest", [\
-      ["npm:29.5.10", {\
-        "packageLocation": "../../.yarn/berry/cache/@types-jest-npm-29.5.10-cc73227aae-10c0.zip/node_modules/@types/jest/",\
+      ["npm:29.5.12", {\
+        "packageLocation": "../../.yarn/berry/cache/@types-jest-npm-29.5.12-6459b9d012-10c0.zip/node_modules/@types/jest/",\
         "packageDependencies": [\
-          ["@types/jest", "npm:29.5.10"],\
+          ["@types/jest", "npm:29.5.12"],\
           ["expect", "npm:29.7.0"],\
           ["pretty-format", "npm:29.7.0"]\
         ],\
@@ -2930,7 +2930,7 @@ const RAW_RUNTIME_STATE =
           ["natural-compare", "npm:1.4.0"],\
           ["semver", "npm:7.5.4"],\
           ["ts-api-utils", "virtual:da89143a1b9d6c0a09cdc03d20af866a9259b4f2911edbc7822456837972e4a72842366d89dffc0483e6954510ad778b75c902934bae6fcdcfa0101a0f08de41#npm:1.0.3"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"]\
         ],\
         "packagePeers": [\
           "@types/eslint",\
@@ -2963,7 +2963,7 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/visitor-keys", "npm:6.9.0"],\
           ["debug", "virtual:4758feee42453c0e31b0d2032a7b1362d6b06281699830d2da9a056f2cca72bd2c5cfdb74005fdf03a64876be8eaca2dd7b0fc2dc59d14318badf19cb22ba18e#npm:4.3.4"],\
           ["eslint", "npm:8.52.0"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"]\
         ],\
         "packagePeers": [\
           "@types/eslint",\
@@ -3004,7 +3004,7 @@ const RAW_RUNTIME_STATE =
           ["debug", "virtual:4758feee42453c0e31b0d2032a7b1362d6b06281699830d2da9a056f2cca72bd2c5cfdb74005fdf03a64876be8eaca2dd7b0fc2dc59d14318badf19cb22ba18e#npm:4.3.4"],\
           ["eslint", "npm:8.52.0"],\
           ["ts-api-utils", "virtual:da89143a1b9d6c0a09cdc03d20af866a9259b4f2911edbc7822456837972e4a72842366d89dffc0483e6954510ad778b75c902934bae6fcdcfa0101a0f08de41#npm:1.0.3"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"]\
         ],\
         "packagePeers": [\
           "@types/eslint",\
@@ -3044,7 +3044,7 @@ const RAW_RUNTIME_STATE =
           ["is-glob", "npm:4.0.3"],\
           ["semver", "npm:7.5.4"],\
           ["ts-api-utils", "virtual:da89143a1b9d6c0a09cdc03d20af866a9259b4f2911edbc7822456837972e4a72842366d89dffc0483e6954510ad778b75c902934bae6fcdcfa0101a0f08de41#npm:1.0.3"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"]\
         ],\
         "packagePeers": [\
           "@types/typescript",\
@@ -5414,7 +5414,7 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/jest-dom", "virtual:60cf364a1d4bdb7101379918194f8d23e19c4285f076fa9f6b3e6678a8765da06ba130debbd470b49dc91f6ea96a4db58eb23d1400dfc7a586a86557850a31f2#npm:6.1.4"],\
           ["@testing-library/react", "virtual:60cf364a1d4bdb7101379918194f8d23e19c4285f076fa9f6b3e6678a8765da06ba130debbd470b49dc91f6ea96a4db58eb23d1400dfc7a586a86557850a31f2#npm:14.1.2"],\
           ["@testing-library/user-event", "virtual:60cf364a1d4bdb7101379918194f8d23e19c4285f076fa9f6b3e6678a8765da06ba130debbd470b49dc91f6ea96a4db58eb23d1400dfc7a586a86557850a31f2#npm:14.5.1"],\
-          ["@types/jest", "npm:29.5.10"],\
+          ["@types/jest", "npm:29.5.12"],\
           ["@types/node", "npm:22.5.0"],\
           ["@types/react", "npm:18.2.33"],\
           ["@types/react-dom", "npm:18.2.14"],\
@@ -5441,7 +5441,7 @@ const RAW_RUNTIME_STATE =
           ["swiper", "npm:11.0.3"],\
           ["ts-jest", "virtual:60cf364a1d4bdb7101379918194f8d23e19c4285f076fa9f6b3e6678a8765da06ba130debbd470b49dc91f6ea96a4db58eb23d1400dfc7a586a86557850a31f2#npm:29.1.1"],\
           ["ts-node", "virtual:60cf364a1d4bdb7101379918194f8d23e19c4285f076fa9f6b3e6678a8765da06ba130debbd470b49dc91f6ea96a4db58eb23d1400dfc7a586a86557850a31f2#npm:10.9.1"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"],\
+          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"],\
           ["vite", "virtual:60cf364a1d4bdb7101379918194f8d23e19c4285f076fa9f6b3e6678a8765da06ba130debbd470b49dc91f6ea96a4db58eb23d1400dfc7a586a86557850a31f2#npm:4.5.0"],\
           ["vitest", "virtual:60cf364a1d4bdb7101379918194f8d23e19c4285f076fa9f6b3e6678a8765da06ba130debbd470b49dc91f6ea96a4db58eb23d1400dfc7a586a86557850a31f2#npm:0.34.6"]\
         ],\
@@ -6614,7 +6614,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/jest-svg-transformer-virtual-985c3e9621/3/.yarn/berry/cache/jest-svg-transformer-npm-1.0.0-f3651e7b28-10c0.zip/node_modules/jest-svg-transformer/",\
         "packageDependencies": [\
           ["jest-svg-transformer", "virtual:60cf364a1d4bdb7101379918194f8d23e19c4285f076fa9f6b3e6678a8765da06ba130debbd470b49dc91f6ea96a4db58eb23d1400dfc7a586a86557850a31f2#npm:1.0.0"],\
-          ["@types/jest", "npm:29.5.10"],\
+          ["@types/jest", "npm:29.5.12"],\
           ["@types/react", "npm:18.2.33"],\
           ["jest", "virtual:60cf364a1d4bdb7101379918194f8d23e19c4285f076fa9f6b3e6678a8765da06ba130debbd470b49dc91f6ea96a4db58eb23d1400dfc7a586a86557850a31f2#npm:29.7.0"],\
           ["react", "npm:18.2.0"]\
@@ -7328,7 +7328,7 @@ const RAW_RUNTIME_STATE =
           ["path-to-regexp", "npm:6.2.1"],\
           ["strict-event-emitter", "npm:0.5.1"],\
           ["type-fest", "npm:2.19.0"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"],\
+          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"],\
           ["yargs", "npm:17.7.2"]\
         ],\
         "packagePeers": [\
@@ -8989,7 +8989,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["ts-api-utils", "virtual:da89143a1b9d6c0a09cdc03d20af866a9259b4f2911edbc7822456837972e4a72842366d89dffc0483e6954510ad778b75c902934bae6fcdcfa0101a0f08de41#npm:1.0.3"],\
           ["@types/typescript", null],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"]\
         ],\
         "packagePeers": [\
           "@types/typescript",\
@@ -9015,7 +9015,7 @@ const RAW_RUNTIME_STATE =
           ["@types/babel-jest", null],\
           ["@types/babel__core", null],\
           ["@types/esbuild", null],\
-          ["@types/jest", "npm:29.5.10"],\
+          ["@types/jest", "npm:29.5.12"],\
           ["@types/jest__types", null],\
           ["@types/typescript", null],\
           ["babel-jest", null],\
@@ -9028,7 +9028,7 @@ const RAW_RUNTIME_STATE =
           ["lodash.memoize", "npm:4.1.2"],\
           ["make-error", "npm:1.3.6"],\
           ["semver", "npm:7.5.4"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"],\
+          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"],\
           ["yargs-parser", "npm:21.1.1"]\
         ],\
         "packagePeers": [\
@@ -9077,7 +9077,7 @@ const RAW_RUNTIME_STATE =
           ["create-require", "npm:1.1.1"],\
           ["diff", "npm:4.0.2"],\
           ["make-error", "npm:1.3.6"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"],\
+          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"],\
           ["v8-compile-cache-lib", "npm:3.0.1"],\
           ["yn", "npm:3.1.1"]\
         ],\
@@ -9145,10 +9145,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["typescript", [\
-      ["patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441", {\
-        "packageLocation": "../../.yarn/berry/cache/typescript-patch-3914634c3a-10c0.zip/node_modules/typescript/",\
+      ["patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07", {\
+        "packageLocation": "../../.yarn/berry/cache/typescript-patch-fe43cd9db9-10c0.zip/node_modules/typescript/",\
         "packageDependencies": [\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"]\
         ],\
         "linkType": "HARD"\
       }]\

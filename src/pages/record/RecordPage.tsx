@@ -1,4 +1,4 @@
-import Record from '@components/record/Record';
+import Record from '@/components/record/Record';
 import { Helmet } from 'react-helmet';
 
 const RecordPage = () => {

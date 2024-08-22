@@ -1,4 +1,4 @@
-import Cityboard from '@components/cityboard/Cityboard';
+import Cityboard from '@/components/cityboard/Cityboard';
 import { Helmet } from 'react-helmet';
 
 const CityBoardPage = () => {

@@ -1,4 +1,4 @@
-import NbtiResult from '@components/nbtiResult/NbtiResult';
+import NbtiResult from '@/components/nbtiResult/NbtiResult';
 import { Helmet } from 'react-helmet';
 
 const NbtiResultPage = () => {

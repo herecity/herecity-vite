@@ -1,14 +1,14 @@
 import { Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
-const HomePage = lazy(() => import('@pages/home/HomePage'));
-const RecordPage = lazy(() => import('@pages/record/RecordPage'));
-const RecordResultPage = lazy(() => import('@pages/record/RecordResultPage'));
-const CityBoardPage = lazy(() => import('@pages/cityboard/CityBoardPage'));
-const NchelinPage = lazy(() => import('@pages/nchelin/Nchelin'));
-const Nbti = lazy(() => import('@pages/nbti/NbtiPage'));
-const NbtiResultPage = lazy(() => import('@pages/nbti/NbtiResultPage'));
-const NotFoundPage = lazy(() => import('@pages/NotFoundPage'));
+const HomePage = lazy(() => import('@/pages/home/HomePage'));
+const RecordPage = lazy(() => import('@/pages/record/RecordPage'));
+const RecordResultPage = lazy(() => import('@/pages/record/RecordResultPage'));
+const CityBoardPage = lazy(() => import('@/pages/cityboard/CityBoardPage'));
+const NchelinPage = lazy(() => import('@/pages/nchelin/Nchelin'));
+const Nbti = lazy(() => import('@/pages/nbti/NbtiPage'));
+const NbtiResultPage = lazy(() => import('@/pages/nbti/NbtiResultPage'));
+const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'));
 
 const RootRoutes = () => {
   return (

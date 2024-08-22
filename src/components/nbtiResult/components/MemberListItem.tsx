@@ -1,4 +1,4 @@
-import { images } from '@assets/images';
+import { images } from '@/assets/images';
 import { NctMember } from '../types/Nbti.types';
 import '../styles/memberListItem.styles.scss';
 

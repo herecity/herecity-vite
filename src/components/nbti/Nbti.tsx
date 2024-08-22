@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './styles/nbti.styles.scss';
-import Header from '@components/common/Header/Header';
+import Header from '@/components/common/Header/Header';
 
 type NbtiAnswerType = 'e' | 'i' | 's' | 'n' | 'f' | 't' | 'j' | 'p';
 

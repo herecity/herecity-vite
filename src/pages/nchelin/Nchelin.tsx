@@ -1,4 +1,4 @@
-import Nchelin from '@components/nchelin/Nchelin';
+import Nchelin from '@/components/nchelin/Nchelin';
 import { Helmet } from 'react-helmet';
 
 const NchelinPage = () => {

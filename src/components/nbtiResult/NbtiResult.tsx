@@ -1,4 +1,4 @@
-import Header from '@components/common/Header/Header';
+import Header from '@/components/common/Header/Header';
 import {
   NbtiType,
   NbtiMembers,
@@ -8,7 +8,7 @@ import {
 import { Navigate, useNavigate, useSearchParams } from 'react-router-dom';
 import MemberListItem from './components/MemberListItem';
 import './styles/nbtiResult.styles.scss';
-import { images } from '@assets/images';
+import { images } from '@/assets/images';
 
 const NbtiResult = () => {
   const navigate = useNavigate();

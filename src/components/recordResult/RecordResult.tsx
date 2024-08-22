@@ -1,9 +1,9 @@
-import Navbar from '@components/common/Header/Header';
+import Navbar from '@/components/common/Header/Header';
 import { useEffect, useRef, useState } from 'react';
 import { TagType } from './types/record.result.types';
 import './styles/record.result.styles.scss';
-import { images } from '@assets/images';
-import Loading from '@components/common/Loading/Loading';
+import { images } from '@/assets/images';
+import Loading from '@/components/common/Loading/Loading';
 import Song from './components/Song';
 import { createDeeplink } from './libs/createDeeplink';
 import { getDevice } from './utils/getDevice';

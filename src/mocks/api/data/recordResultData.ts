@@ -1,7 +1,7 @@
 import {
   ArtistType,
   SongType,
-} from '@components/recordResult/types/record.result.types';
+} from '@/components/recordResult/types/record.result.types';
 
 type TestDummyDataType = { [songList: string]: SongType[] };
 type TestConcertDummyDataType = Partial<{ [artist in ArtistType]: SongType[] }>;

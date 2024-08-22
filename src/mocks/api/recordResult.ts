@@ -1,4 +1,4 @@
-import { SongFile } from '@components/recordResult/api/playlistClient';
+import { SongFile } from '@/components/recordResult/api/playlistClient';
 import { HttpResponse, http } from 'msw';
 import {
   recordResultConcertData,
@@ -8,7 +8,7 @@ import {
   recordResultSoloData,
   recordResultWayVData,
 } from './data/recordResultData';
-import { baseURLForTest } from '@api/api';
+import { baseURLForTest } from '@/api/api';
 
 export const recordResultHandlers = [
   http.get(`${baseURLForTest}${SongFile['NCT 127']}`, () => {

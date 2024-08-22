@@ -1,8 +1,8 @@
-import Navbar from '@components/common/Header/Header';
+import Navbar from '@/components/common/Header/Header';
 import { useState } from 'react';
 import './styles/record.styles.scss';
 import { useNavigate } from 'react-router-dom';
-import { TagType } from '@components/recordResult/types/record.result.types';
+import { TagType } from '@/components/recordResult/types/record.result.types';
 
 const Record = () => {
   const navigate = useNavigate();
