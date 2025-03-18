@@ -16,14 +16,20 @@ jobs:
         with:
           github-token: ${{ secrets.ADMIN_TOKEN }}
           script: |
-            await github.rest.repos.updateBranchProtection({
-              owner: context.repo.owner,
-              repo: context.repo.name,
-              branch: 'develop',
-              required_status_checks: null,
-              enforce_admins: true,
-              required_pull_request_reviews: {
-                required_approving_review_count: 6
-              },
-              restrictions: null
-            });
+            console.log('context:',  context);    // 디버깅을 위한 로그
+              try {
+                await github.rest.repos.updateBranchProtection({
+                  owner: context.repo.owner,
+                  repo: context.repo.name,
+                  branch: 'develop',
+                  required_status_checks: null,
+                  enforce_admins: true,
+                  required_pull_request_reviews: {
+                    required_approving_review_count: 1
+                  },
+                  restrictions: null
+                });
+              } catch (error) {
+                console.error('Error details:', error);
+                throw error;
+              }
