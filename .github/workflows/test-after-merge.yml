@@ -68,6 +68,8 @@ jobs:
               restrictions: currentProtection.restrictions
             };
 
+            console.log('currentProtection:', currentProtection);
+
             try{
               // 브랜치 보호 설정 업데이트
             await github.rest.repos.updateBranchProtection({
