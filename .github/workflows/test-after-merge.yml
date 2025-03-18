@@ -22,8 +22,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20.x"
+
+      - name: Sleep for 1 minute
+        run: sleep 60
+
       - name: Install dependencies
         run: yarn --frozen-lockfile
+
       - name: test
         run: yarn test
 
