@@ -43,11 +43,19 @@ jobs:
           github-token: ${{ secrets.ADMIN_TOKEN }}
           script: |
             // 현재 브랜치 보호 설정 가져오기
-            const { data: currentProtection } = await github.rest.repos.getBranchProtection({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              branch: 'develop'
-            });
+
+            try{
+              const { data: currentProtection } = await github.rest.repos.getBranchProtection({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                branch: 'develop'
+              });
+            } catch (error) {
+              console.error('Error getting branch protection:', error);
+              throw error;
+            }
+
+
 
             // 필요한 필드만 수정
             const updatedProtection = {
@@ -60,7 +68,8 @@ jobs:
               restrictions: currentProtection.restrictions
             };
 
-            // 브랜치 보호 설정 업데이트
+            try{
+              // 브랜치 보호 설정 업데이트
             await github.rest.repos.updateBranchProtection({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -73,5 +82,9 @@ jobs:
               },
               restrictions: currentProtection.restrictions
             });
+            } catch (error) {
+              console.error('Error updating branch protection:', error);
+              throw error;
+            }
 
             console.log("Branch protection updated successfully.");
