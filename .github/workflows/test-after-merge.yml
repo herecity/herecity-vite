@@ -50,6 +50,8 @@ jobs:
               branch: 'develop'
             });
 
+            console.log('currentProtection:', currentProtection);
+
             // 필요한 필드만 수정
             const updatedProtection = {
               required_status_checks: currentProtection.required_status_checks,
