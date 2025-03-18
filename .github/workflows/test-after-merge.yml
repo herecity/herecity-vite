@@ -42,40 +42,17 @@ jobs:
         with:
           github-token: ${{ secrets.ADMIN_TOKEN }}
           script: |
-            // 현재 브랜치 보호 설정 가져오기
-            try {
-              const currentProtection = await github.rest.repos.getBranchProtection({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              branch: 'develop'
-            });
-
-            console.log('currentProtection:', currentProtection);
-
-            // 필요한 필드만 수정
-            const updatedProtection = {
-              required_status_checks: currentProtection.required_status_checks,
-              enforce_admins: currentProtection.enforce_admins,
-              required_pull_request_reviews: {
-              ...currentProtection.required_pull_request_reviews,
-              required_approving_review_count: 1
-            },
-            restrictions: currentProtection.restrictions
-            };
-
-            console.log('currentProtection:', currentProtection);
-
-            // 브랜치 보호 설정 업데이트
-            await github.rest.repos.updateBranchProtection({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              branch: 'develop',
-              ...updatedProtection
-            });
-
-            console.log("Branch protection updated successfully.");
-
-            } catch (error) {
-                console.error('Error :', error);
-                throw error;
-            }
+            try{
+              // 브랜치 보호 설정 업데이트
+              await github.rest.repos.updatePullRequestReviewProtection({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  branch: 'develop',
+                  required_approving_review_count: 1
+                  }); 
+                
+                  console.log("Branch protection updated successfully.");
+                  } catch (error) {
+                  console.error('Error :', error);
+                  throw error;
+                  }
