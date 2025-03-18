@@ -20,7 +20,7 @@ jobs:
               try {
                 await github.rest.repos.updateBranchProtection({
                   owner: context.repo.owner,
-                  repo: context.repo.name,
+                  repo: context.repo.repo,
                   branch: 'develop',
                   required_status_checks: null,
                   enforce_admins: true,
