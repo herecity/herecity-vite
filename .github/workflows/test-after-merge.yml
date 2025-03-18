@@ -50,7 +50,7 @@ jobs:
               enforce_admins: currentProtection.enforce_admins.enabled,
               required_pull_request_reviews: {
                 ...currentProtection.required_pull_request_reviews,
-                required_approving_review_count: 0 
+                required_approving_review_count: 1 
               },
               restrictions: currentProtection.restrictions
             };
