@@ -18,21 +18,23 @@ jobs:
           script: |
             // 현재 브랜치 보호 설정 가져오기
             try {
-              const currentProtection = await github.rest.repos.getBranchProtection({
+              const {data:currentProtection} = await github.rest.repos.getBranchProtection({
               owner: context.repo.owner,
               repo: context.repo.repo,
               branch: 'develop'
             });
 
+            console.log('currentProtection:', currentProtection);
+
             // 필요한 필드만 수정
             const updatedProtection = {
               required_status_checks: currentProtection.required_status_checks,
-              enforce_admins: currentProtection.enforce_admins,
+              enforce_admins: currentProtection.enforce_admins.enabled,
               required_pull_request_reviews: {
               ...currentProtection.required_pull_request_reviews,
               required_approving_review_count: 6
             },
-            restrictions: currentProtection.restrictions
+            restrictions: currentProtection.restrictions || null
             };
 
             console.log('currentProtection:', currentProtection);
