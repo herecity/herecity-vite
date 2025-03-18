@@ -17,11 +17,19 @@ jobs:
           github-token: ${{ secrets.ADMIN_TOKEN }}
           script: |
             // 현재 브랜치 보호 설정 가져오기
-            const { data: currentProtection } = await github.rest.repos.getBranchProtection({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              branch: 'develop'
-            });
+
+            try{
+              const currentProtection = await github.rest.repos.getBranchProtection({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                branch: 'develop'
+              });
+            } catch (error) {
+              console.error('Error getting branch protection:', error);
+              throw error;
+            }
+
+
 
             // 필요한 필드만 수정
             const updatedProtection = {
@@ -29,21 +37,24 @@ jobs:
               enforce_admins: currentProtection.enforce_admins.enabled,
               required_pull_request_reviews: {
                 ...currentProtection.required_pull_request_reviews,
-                required_approving_review_count: 6 
+                required_approving_review_count: 6
               },
               restrictions: currentProtection.restrictions
             };
 
-            // 브랜치 보호 설정 업데이트
+            console.log('currentProtection:', currentProtection);
+
+            try{
+              // 브랜치 보호 설정 업데이트
             await github.rest.repos.updateBranchProtection({
               owner: context.repo.owner,
               repo: context.repo.repo,
               branch: 'develop',
-              required_status_checks: currentProtection.required_status_checks,
-              enforce_admins: currentProtection.enforce_admins.enabled,
-              required_pull_request_reviews: {
-                ...currentProtection.required_pull_request_reviews,
-                required_approving_review_count: 1 
-              },
-              restrictions: currentProtection.restrictions
+              ...updatedProtection
             });
+            } catch (error) {
+              console.error('Error updating branch protection:', error);
+              throw error;
+            }
+
+            console.log("Branch protection updated successfully.");
