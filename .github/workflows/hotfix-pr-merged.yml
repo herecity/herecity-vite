@@ -1,0 +1,29 @@
+name: Hotfix PR Merged
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - develop
+
+jobs:
+  update-branch-protection:
+    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'hotfix')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update branch protection rule
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.ADMIN_TOKEN }}
+          script: |
+            await github.rest.repos.updateBranchProtection({
+              owner: context.repo.owner,
+              repo: context.repo.name,
+              branch: 'develop',
+              required_status_checks: null,
+              enforce_admins: true,
+              required_pull_request_reviews: {
+                required_approving_review_count: 6
+              },
+              restrictions: null
+            });
