@@ -27,7 +27,7 @@ jobs:
             // 필요한 필드만 수정
             const updatedProtection = {
               required_status_checks: currentProtection.required_status_checks,
-              enforce_admins: currentProtection.enforce_admins.enabled,
+              enforce_admins: currentProtection.enforce_admins,
               required_pull_request_reviews: {
               ...currentProtection.required_pull_request_reviews,
               required_approving_review_count: 6
