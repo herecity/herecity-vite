@@ -35,7 +35,7 @@ jobs:
       - name: Update branch protection rule
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.ADMIN_TOKEN }}
           script: |
             await github.rest.repos.updateBranchProtection({
               owner: context.repo.owner,
@@ -44,7 +44,7 @@ jobs:
               required_status_checks: null,
               enforce_admins: true,
               required_pull_request_reviews: {
-                required_approving_review_count: 0
+                required_approving_review_count: 1
               },
               restrictions: null
             });
