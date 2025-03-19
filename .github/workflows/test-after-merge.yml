@@ -46,8 +46,7 @@ jobs:
               const res = await github.rest.repos.updatePullRequestReviewProtection({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
-                  branch: 'develop',
-                  dismissal_restrictions:{},
+                  branch: 'release',
                   required_approving_review_count: 1
                   }); 
                 
