@@ -1,5 +1,5 @@
 export const test = () => {
-  console.log("123123123");
+  console.log("345345");
 };
 export const test2 = () => {
   console.log("test13dd234234");
