@@ -16,15 +16,14 @@ jobs:
           github-token: ${{ secrets.ADMIN_TOKEN }}
           script: |
             try{
-              // PR 보호 설정 업데이트
-              await github.rest.repos.updatePullRequestReviewProtection({
+              const res = await github.rest.repos.updatePullRequestReviewProtection({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   branch: 'develop',
                   required_approving_review_count: 6
                   }); 
                 
-                  console.log("Branch protection updated successfully.");
+                  console.log("Branch protection updated successfully.", res);
                   } catch (error) {
                   console.error('Error :', error);
                   throw error;
