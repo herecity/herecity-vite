@@ -6,11 +6,11 @@ on:
     branches: ["develop"]
 
 jobs:
-  update-branch-protection:
+  update-pr-protection:
     if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'hotfix')
     runs-on: ubuntu-latest
     steps:
-      - name: Update branch protection rule
+      - name: Update pr protection rule
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.ADMIN_TOKEN }}
