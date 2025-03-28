@@ -6,25 +6,15 @@ on:
     branches: ["develop"]
 
 jobs:
-  update-pr-protection:
+  update-pr-protection-on-hotfix-merged:
     if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'hotfix')
     runs-on: ubuntu-latest
     steps:
-      - name: Update pr protection rule
-        uses: actions/github-script@v6
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Update PR protection rule
+        uses: ./.github/actions/update-branch-protection
         with:
-          github-token: ${{ secrets.ADMIN_TOKEN }}
-          script: |
-            try{
-              const res = await github.rest.repos.updatePullRequestReviewProtection({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  branch: 'develop',
-                  required_approving_review_count: 6
-                  }); 
-                
-                  console.log("Branch protection updated successfully.", res);
-                  } catch (error) {
-                  console.error('Error :', error);
-                  throw error;
-                  }
+          review-count: 6
+          token: ${{ secrets.ADMIN_TOKEN }}

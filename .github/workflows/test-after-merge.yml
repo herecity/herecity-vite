@@ -32,26 +32,16 @@ jobs:
       - name: test
         run: yarn test
 
-  update-pr-protection:
+  restore-original-pr-protection:
     needs: build
     runs-on: ubuntu-latest
     if: always()
     steps:
-      - name: Update branch protection rule
-        uses: actions/github-script@v6
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Update PR protection rule
+        uses: ./.github/actions/update-branch-protection
         with:
-          github-token: ${{ secrets.ADMIN_TOKEN }}
-          script: |
-            try{
-              const res = await github.rest.repos.updatePullRequestReviewProtection({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  branch: 'develop',
-                  required_approving_review_count: 1
-                  }); 
-                
-                  console.log("Branch protection updated successfully.", res);
-                  } catch (error) {
-                  console.error('Error :', error);
-                  throw error;
-                  }
+          review-count: 1
+          token: ${{ secrets.ADMIN_TOKEN }}
