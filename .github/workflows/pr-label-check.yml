@@ -1,0 +1,18 @@
+name: check-label
+on:
+  pull_request:
+    branches:
+      - develop
+      - develop-*
+    types: [opened, synchronize, labeled, unlabeled, ready_for_review]
+
+jobs:
+  reset-review-count:
+    runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, 'reset review count')
+    steps:
+      - name: Update PR protection rule
+        uses: ./.github/actions/update-branch-protection
+        with:
+          review-count: 1
+          token: ${{ secrets.ADMIN_TOKEN }}
